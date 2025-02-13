@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "Husky Trails",
+    "slug": "husky-trails",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,13 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.frisbeebeast11org.huskytrails"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.frisbeebeast11org.huskytrails"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +38,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "523e88ea-d1f4-4f68-8dbd-4a30e2798210"
+      }
+    },
+    "owner": "frisbeebeast11-org",
+    "updates": {
+      "url": "https://u.expo.dev/523e88ea-d1f4-4f68-8dbd-4a30e2798210"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
