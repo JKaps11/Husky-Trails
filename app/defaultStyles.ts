@@ -1,5 +1,5 @@
-import { COLORS } from '@/constants/theme'
-import { StyleSheet } from 'react-native'
+import { COLORS } from '@/constants/theme';
+import { StyleSheet } from 'react-native';
 
 export const defaultStyles = StyleSheet.create({
   container: {
@@ -29,20 +29,20 @@ export const defaultStyles = StyleSheet.create({
     height: '10%',
     zIndex: 2,
   },
-  bottomNavBar: {
-    position: 'absolute',
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    backgroundColor: COLORS.primary,
-    borderRadius: 50,
-    top: '80%',
-    left: '15%',
-    width: '70%',
-    height: '7.5%',
-    zIndex: 2,
-  },
+  // bottomNavBar: {
+  //   position: 'absolute',
+  //   flex: 1,
+  //   flexDirection: 'row',
+  //   alignItems: 'center',
+  //   justifyContent: 'space-around',
+  //   backgroundColor: COLORS.primary,
+  //   borderRadius: 50,
+  //   top: '80%',
+  //   left: '15%',
+  //   width: '70%',
+  //   height: '7.5%',
+  //   zIndex: 2,
+  // },
   map: {
     position: 'absolute',
     left: 0,
@@ -53,4 +53,6 @@ export const defaultStyles = StyleSheet.create({
     top: 0,
     zIndex: 1,
   },
-})
+});
+
+export default defaultStyles;
