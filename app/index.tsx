@@ -5,10 +5,11 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Entypo from '@expo/vector-icons/Entypo';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { MapView } from '@maplibre/maplibre-react-native';
+import { MapView, Camera, RasterSource } from '@maplibre/maplibre-react-native';
 import { COLORS, CustomTheme } from '@/constants/theme';
 import { defaultStyles } from './defaultStyles';
 import FilterButtons from '@/components/filterButtons/filterButtons';
+
 
 const Index: React.FC = () => {
   const [placeSearcherd, setPlaceSearched] = useState<string>('');
@@ -48,7 +49,20 @@ const Index: React.FC = () => {
           /> 
         </View> */}
         <FilterButtons />
-        <MapView style={defaultStyles.map} />
+        <MapView style={defaultStyles.map} >
+        <Camera
+          zoomLevel={16}
+          centerCoordinate={[-72.282, 41.807]} // UConn campus coordinates
+        />
+        {/* will need to make this a vector source in the future*/}
+        <RasterSource
+          id='uconnSource'
+          url={require('./assets/uconn.mbtiles')}
+        >
+
+        </RasterSource>
+      </MapView>  
+        <MapView/>
       </SafeAreaView>
     </PaperProvider>
   );

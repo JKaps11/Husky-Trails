@@ -25,6 +25,12 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "expo-asset",
+          {
+            "assets": "./assets/uconn.mbtiles"
+          }
+      ],
       "@maplibre/maplibre-react-native",
       "expo-router",
       [

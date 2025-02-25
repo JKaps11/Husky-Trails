@@ -35,6 +35,7 @@ export default [
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
+      'prettier/prettier': ['error', { endOfLine: 'auto' }],
       'import/order': [
         'error',
         {
@@ -45,7 +46,6 @@ export default [
           'newlines-between': 'always',
         },
       ],
-      'prettier/prettier': 'error',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       semi: ['error', 'always'],
       // Example React rules:
@@ -54,5 +54,8 @@ export default [
       // Example React Native rules:
       'react-native/no-inline-styles': 'warn',
     },
+  },
+  {
+    ignores: ['server.js'],
   },
 ];
