@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Provider as PaperProvider, ActivityIndicator } from 'react-native-paper';
+import {
+  Provider as PaperProvider,
+  ActivityIndicator,
+} from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Entypo from '@expo/vector-icons/Entypo';
 import { COLORS, CustomTheme } from '@/constants/theme';
@@ -10,7 +13,6 @@ import FilterButtons from '@/components/filterButtons/filterButtons';
 import UConnMap from '@/components/maps/uconnHomeMap';
 
 const Index: React.FC = () => {
-
   const [placeSearcherd, setPlaceSearched] = useState<string>('');
   const [search, setSearch] = useState<string>('');
 
@@ -40,8 +42,7 @@ const Index: React.FC = () => {
           />
         </View>
         <FilterButtons />
-          <UConnMap/> 
-       
+        <UConnMap />
       </SafeAreaView>
     </PaperProvider>
   );

@@ -27,9 +27,9 @@
     "plugins": [
       [
         "expo-asset",
-          {
-            "assets": "./assets/uconn.mbtiles"
-          }
+        {
+          "assets": "./assets/uconn.mbtiles"
+        }
       ],
       "@maplibre/maplibre-react-native",
       "expo-router",

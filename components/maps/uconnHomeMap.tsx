@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
-import { MapView, Camera, VectorSource, FillLayer, LineLayer, SymbolLayer } from '@maplibre/maplibre-react-native';
+import {
+  MapView,
+  Camera,
+  VectorSource,
+  FillLayer,
+  LineLayer,
+  SymbolLayer,
+} from '@maplibre/maplibre-react-native';
 import { useAssets } from 'expo-asset';
 
 const UConnMap: React.FC = () => {
@@ -12,7 +19,9 @@ const UConnMap: React.FC = () => {
     if (assets && assets[0]) {
       const localUri = assets[0].localUri || assets[0].uri;
       if (localUri) {
-        const cleanedUri = localUri.startsWith("file://") ? localUri.replace("file://", "") : localUri;
+        const cleanedUri = localUri.startsWith('file://')
+          ? localUri.replace('file://', '')
+          : localUri;
         setAssetUri(cleanedUri);
       }
     }
@@ -30,7 +39,6 @@ const UConnMap: React.FC = () => {
         // With your MBTiles max zoom of 3, use the highest zoom available.
         zoomLevel={13}
         // Optionally, constrain panning to the MBTiles bounds if your version supports it.
-        
       />
       <VectorSource
         id="uconnSource"
@@ -44,7 +52,7 @@ const UConnMap: React.FC = () => {
           sourceID="uconnSource"
           sourceLayerID="Buildings" // must match the layer name in your MBTiles metadata
           style={{
-            fillColor: '#f0e68c',    // a light khaki color
+            fillColor: '#f0e68c', // a light khaki color
             fillOpacity: 0.7,
           }}
         />
@@ -60,21 +68,20 @@ const UConnMap: React.FC = () => {
         />
         {/* Points Layer (for points of interest) */}
         <SymbolLayer
-  id="points-layer"
-  sourceID="uconnSource"
-  sourceLayerID="Points"
-  style={{
-    // Wrap the text expression with "format"
-    textField: ["format", ["get", "name"], {}],
-    textSize: 10,
-    textColor: '#333',
-    textHaloColor: '#fff',
-    textHaloWidth: 1,
-    iconImage: 'marker-15',
-    iconSize: 1,
-  }}
-/>
-
+          id="points-layer"
+          sourceID="uconnSource"
+          sourceLayerID="Points"
+          style={{
+            // Wrap the text expression with "format"
+            textField: ['format', ['get', 'name'], {}],
+            textSize: 10,
+            textColor: '#333',
+            textHaloColor: '#fff',
+            textHaloWidth: 1,
+            iconImage: 'marker-15',
+            iconSize: 1,
+          }}
+        />
       </VectorSource>
     </MapView>
   ) : (
