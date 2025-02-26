@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Provider as PaperProvider } from 'react-native-paper';
+import { Provider as PaperProvider, ActivityIndicator } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import Entypo from '@expo/vector-icons/Entypo';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { MapView, Camera, RasterSource } from '@maplibre/maplibre-react-native';
 import { COLORS, CustomTheme } from '@/constants/theme';
 import { defaultStyles } from './defaultStyles';
 import FilterButtons from '@/components/filterButtons/filterButtons';
-
+import UConnMap from '@/components/maps/uconnHomeMap';
 
 const Index: React.FC = () => {
+
   const [placeSearcherd, setPlaceSearched] = useState<string>('');
   const [search, setSearch] = useState<string>('');
 
@@ -40,29 +39,9 @@ const Index: React.FC = () => {
             selectionColor={COLORS.primary}
           />
         </View>
-        {/* <View style={defaultStyles.bottomNavBar}>
-          <FontAwesome.Button
-            name="search"
-            size={30}
-            color={COLORS.defaultText}
-            backgroundColor="#00000000"
-          /> 
-        </View> */}
         <FilterButtons />
-        <MapView style={defaultStyles.map} >
-        <Camera
-          zoomLevel={16}
-          centerCoordinate={[-72.282, 41.807]} // UConn campus coordinates
-        />
-        {/* will need to make this a vector source in the future*/}
-        <RasterSource
-          id='uconnSource'
-          url={require('./assets/uconn.mbtiles')}
-        >
-
-        </RasterSource>
-      </MapView>  
-        <MapView/>
+          <UConnMap/> 
+       
       </SafeAreaView>
     </PaperProvider>
   );

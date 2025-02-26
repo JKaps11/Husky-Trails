@@ -56,6 +56,6 @@ export default [
     },
   },
   {
-    ignores: ['server.js'],
+    ignores: ['server.js', 'metro.config.js'],
   },
 ];
