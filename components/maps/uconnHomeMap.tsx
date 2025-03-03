@@ -82,7 +82,7 @@ const UConnMap: React.FC = () => {
           }}
         />
 
-        {/* Points Layer - Last layer */}
+        {/* Points Layer */}
         <SymbolLayer
           id="points-layer"
           sourceID="uconnSource"
