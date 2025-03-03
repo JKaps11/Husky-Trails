@@ -38,7 +38,7 @@ const UConnMap: React.FC = () => {
     >
       <Camera
         centerCoordinate={centerCoordinate}
-        // With your MBTiles max zoom of 3, use the highest zoom available.
+        animationDuration={0}
         zoomLevel={13}
         // Optionally, constrain panning to the MBTiles bounds if your version supports it.
       />
