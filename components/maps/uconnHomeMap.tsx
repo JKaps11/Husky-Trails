@@ -38,7 +38,7 @@ const UConnMap: React.FC = () => {
         <FillLayer
           id="buildings-layer"
           sourceID="uconnSource"
-          sourceLayerID="Buildings" // Must match the layer name in your MBTiles metadata
+          sourceLayerID="Buildings"
           style={{
             fillColor: '#f0e68c',    // A light khaki color
             fillOpacity: 0.3,
