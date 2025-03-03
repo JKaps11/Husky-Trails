@@ -25,6 +25,13 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "expo-asset",
+        {
+          "assets": "./assets/uconn.mbtiles"
+        }
+      ],
+      "@maplibre/maplibre-react-native",
       "expo-router",
       [
         "expo-splash-screen",
@@ -44,7 +51,7 @@
         "projectId": "523e88ea-d1f4-4f68-8dbd-4a30e2798210"
       }
     },
-    "owner": "frisbeebeast11-org",
+    "owner": "seniordesigngroup",
     "updates": {
       "url": "https://u.expo.dev/523e88ea-d1f4-4f68-8dbd-4a30e2798210"
     },
