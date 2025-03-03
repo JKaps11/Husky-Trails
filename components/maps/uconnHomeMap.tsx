@@ -19,35 +19,44 @@ const UConnMap: React.FC = () => {
   }, [assets]);
 
   // Using the MBTiles metadata bounds:
-  // bounds: -72.2837,41.7872,-72.2238,41.8482
-  // Calculate a center roughly by averaging these values:
   const centerCoordinate = [-72.2538, 41.8177];
 
   return assetUri ? (
     <MapView style={{ flex: 1 }}>
       <Camera
         centerCoordinate={centerCoordinate}
-        // With your MBTiles max zoom of 3, use the highest zoom available.
-        zoomLevel={13}
-        // Optionally, constrain panning to the MBTiles bounds if your version supports it.
-        
+        zoomLevel={14}
       />
       <VectorSource
         id="uconnSource"
         tileUrlTemplates={[`mbtiles:///${assetUri}`]}
         minZoomLevel={0}
-        maxZoomLevel={3}
+        maxZoomLevel={12}
       >
-        {/* Buildings Layer */}
+
+        {/* Buildings Fill Layer */}
         <FillLayer
           id="buildings-layer"
           sourceID="uconnSource"
-          sourceLayerID="Buildings" // must match the layer name in your MBTiles metadata
+          sourceLayerID="Buildings"
           style={{
-            fillColor: '#f0e68c',    // a light khaki color
-            fillOpacity: 0.7,
+            fillColor: '#f0e68c',    // A light khaki color
+            fillOpacity: 0.3,
           }}
         />
+
+        {/* Buildings Outline Layer */}
+        <LineLayer
+          id="buildings-outline-layer"
+          sourceID="uconnSource"
+          sourceLayerID="Buildings"
+          style={{
+            lineColor: '#8B4513',        // Color of the outline
+            lineWidth: 2,
+            lineOpacity: .5,
+          }}
+        />
+
         {/* Roads Layer */}
         <LineLayer
           id="roads-layer"
@@ -55,26 +64,39 @@ const UConnMap: React.FC = () => {
           sourceLayerID="Roads"
           style={{
             lineColor: '#555',
-            lineWidth: 2,
+            lineWidth: 3,
           }}
         />
-        {/* Points Layer (for points of interest) */}
-        <SymbolLayer
-  id="points-layer"
-  sourceID="uconnSource"
-  sourceLayerID="Points"
-  style={{
-    // Wrap the text expression with "format"
-    textField: ["format", ["get", "name"], {}],
-    textSize: 10,
-    textColor: '#333',
-    textHaloColor: '#fff',
-    textHaloWidth: 1,
-    iconImage: 'marker-15',
-    iconSize: 1,
-  }}
-/>
 
+        {/* Buildings Name Layer */}
+        <SymbolLayer
+          id="building-names-layer"
+          sourceID="uconnSource"
+          sourceLayerID="Buildings" // source layer with building names
+          style={{
+            textField: ["get", "name"],
+            textSize: 10,
+            textColor: '#333',
+            textHaloColor: '#fff',
+            textHaloWidth: 1,
+          }}
+        />
+
+        {/* Points Layer */}
+        <SymbolLayer
+          id="points-layer"
+          sourceID="uconnSource"
+          sourceLayerID="Points"
+          style={{
+            textField: ["format", ["get", "name"], {}],
+            textSize: 10,
+            textColor: '#333',
+            textHaloColor: '#fff',
+            textHaloWidth: 1,
+            iconImage: 'marker-15',
+            iconSize: 1,
+          }}
+        />
       </VectorSource>
     </MapView>
   ) : (
