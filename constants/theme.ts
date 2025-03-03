@@ -1,7 +1,8 @@
 import { MD3LightTheme as DefaultTheme } from 'react-native-paper';
 
 export const COLORS = {
-  primary: 'rgba(0, 14, 47, 0.8)',
+  primaryO: 'rgba(0, 14, 47, 0.8)',
+  primary: '#000E2F',
   defaultText: '#FFFFFF',
 };
 

@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
-import { MapView, Camera, VectorSource, FillLayer, LineLayer, SymbolLayer } from '@maplibre/maplibre-react-native';
+import {
+  MapView,
+  Camera,
+  VectorSource,
+  FillLayer,
+  LineLayer,
+  SymbolLayer,
+} from '@maplibre/maplibre-react-native';
 import { useAssets } from 'expo-asset';
 
 const UConnMap: React.FC = () => {
@@ -12,20 +19,27 @@ const UConnMap: React.FC = () => {
     if (assets && assets[0]) {
       const localUri = assets[0].localUri || assets[0].uri;
       if (localUri) {
-        const cleanedUri = localUri.startsWith("file://") ? localUri.replace("file://", "") : localUri;
+        const cleanedUri = localUri.startsWith('file://')
+          ? localUri.replace('file://', '')
+          : localUri;
         setAssetUri(cleanedUri);
       }
     }
   }, [assets]);
 
   // Using the MBTiles metadata bounds:
-  const centerCoordinate = [-72.2538, 41.8177];
+  const centerCoordinate = [-72.2538, 41.8157];
 
   return assetUri ? (
-    <MapView style={{ flex: 1 }}>
+    <MapView
+      style={{ flex: 1 }}
+      compassEnabled={false}
+      attributionEnabled={false}
+    >
       <Camera
         centerCoordinate={centerCoordinate}
         zoomLevel={14}
+        animationDuration={0}
       />
       <VectorSource
         id="uconnSource"
@@ -33,14 +47,13 @@ const UConnMap: React.FC = () => {
         minZoomLevel={0}
         maxZoomLevel={12}
       >
-
         {/* Buildings Fill Layer */}
         <FillLayer
           id="buildings-layer"
           sourceID="uconnSource"
           sourceLayerID="Buildings"
           style={{
-            fillColor: '#f0e68c',    // A light khaki color
+            fillColor: '#f0e68c', // A light khaki color
             fillOpacity: 0.3,
           }}
         />
@@ -51,9 +64,9 @@ const UConnMap: React.FC = () => {
           sourceID="uconnSource"
           sourceLayerID="Buildings"
           style={{
-            lineColor: '#8B4513',        // Color of the outline
+            lineColor: '#8B4513', // Color of the outline
             lineWidth: 2,
-            lineOpacity: .5,
+            lineOpacity: 0.5,
           }}
         />
 
@@ -74,7 +87,7 @@ const UConnMap: React.FC = () => {
           sourceID="uconnSource"
           sourceLayerID="Buildings" // source layer with building names
           style={{
-            textField: ["get", "name"],
+            textField: ['get', 'name'],
             textSize: 10,
             textColor: '#333',
             textHaloColor: '#fff',
@@ -88,7 +101,7 @@ const UConnMap: React.FC = () => {
           sourceID="uconnSource"
           sourceLayerID="Points"
           style={{
-            textField: ["format", ["get", "name"], {}],
+            textField: ['format', ['get', 'name'], {}],
             textSize: 10,
             textColor: '#333',
             textHaloColor: '#fff',
