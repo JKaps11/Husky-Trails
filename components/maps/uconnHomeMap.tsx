@@ -1,19 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
 import { View } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import {
-  MapView,
   Camera,
+  CameraRef,
+  MapView,
   VectorSource,
   FillLayer,
   LineLayer,
   SymbolLayer,
 } from '@maplibre/maplibre-react-native';
 import { useAssets } from 'expo-asset';
+import { ZoomInfo } from '@/types/mapTypes';
 
-const UConnMap: React.FC = () => {
+interface MapProps {
+  zoomInfo: ZoomInfo;
+}
+
+const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
   const [assetUri, setAssetUri] = useState<string | null>(null);
   const [assets] = useAssets([require('../../assets/uconnVector.mbtiles')]);
+  const [isMapLoaded, setIsMapLoaded] = useState<boolean>(false);
+
+  const cameraRef = useRef<CameraRef>(null);
 
   useEffect(() => {
     if (assets && assets[0]) {
@@ -27,16 +36,33 @@ const UConnMap: React.FC = () => {
     }
   }, [assets]);
 
-  // Using the MBTiles metadata bounds:
+  useEffect(() => {
+    if (cameraRef.current && isMapLoaded) {
+      console.log('attempting camera move');
+      cameraRef.current.setCamera({
+        centerCoordinate: zoomInfo.coordinates,
+        zoomLevel: zoomInfo.zoomLevel,
+        animationDuration: zoomInfo.animationDuration,
+      });
+    } else {
+      console.log('camera not working');
+    }
+  }, [zoomInfo, isMapLoaded]);
+
   const centerCoordinate = [-72.2538, 41.8157];
 
-  return assetUri ? (
+  return (
     <MapView
       style={{ flex: 1 }}
       compassEnabled={false}
       attributionEnabled={false}
+      onDidFinishLoadingMap={() => {
+        console.log('Map finished loading');
+        setIsMapLoaded(true);
+      }}
     >
       <Camera
+        ref={cameraRef}
         centerCoordinate={centerCoordinate}
         animationDuration={0}
         zoomLevel={13}
@@ -114,11 +140,7 @@ const UConnMap: React.FC = () => {
         />
       </VectorSource>
     </MapView>
-  ) : (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <ActivityIndicator animating={true} />
-    </View>
   );
-};
+});
 
 export default UConnMap;
