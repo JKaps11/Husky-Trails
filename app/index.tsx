@@ -29,13 +29,13 @@ const Index: React.FC = () => {
   };
 
   const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
-    coordinates: [-72.2538, 41.8157],
-    zoomLevel: 13,
-    animationDuration: 0,
+    coordinates: [-72.2548, 41.8087],
+    zoomLevel: 15,
+    animationDuration: 1000,
   });
 
   const zoomToLocation: (zi: ZoomInfo) => void = (zi: ZoomInfo) => {
-    setZoomInfo(zi);
+    setZoomInfo(JSON.parse(JSON.stringify(zi)));
   };
 
   return (
@@ -55,7 +55,7 @@ const Index: React.FC = () => {
             iconStyle={{ margin: 0 }}
           />
           */}
-            <CustomSearchBar onType={onSearchBarType} />
+            <CustomSearchBar value={searchQuery} onType={onSearchBarType} />
           </View>
           <SearchModal
             visible={visibleModal}

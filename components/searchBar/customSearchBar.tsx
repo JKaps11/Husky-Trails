@@ -6,24 +6,20 @@ import { COLORS } from '@/constants/theme';
 import { useState } from 'react';
 
 interface CustomSearchBarProps {
-  onType: (query: string) => string;
+  value: string;
+  onType: (query: string) => void;
 }
 
 const CustomSearchBar: React.FC<CustomSearchBarProps> = ({
+  value,
   onType,
 }: CustomSearchBarProps) => {
-  const [text, setText] = useState<string>('');
-
-  const handleTextChange = (query: string) => {
-    setText(onType(query));
-  };
-
   return (
     <View style={{ height: '70%', width: '80%' }}>
       <Searchbar
         placeholder="Search"
-        onChangeText={handleTextChange}
-        value={text}
+        onChangeText={onType}
+        value={value}
         style={searchBarStyles.searchBar}
         inputStyle={searchBarStyles.searchBarText}
         iconColor={COLORS.defaultText}

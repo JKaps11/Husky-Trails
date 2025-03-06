@@ -1,4 +1,4 @@
-import { Modal, Portal, Menu, Text } from 'react-native-paper';
+import { Modal, Portal, List, DefaultTheme } from 'react-native-paper';
 import { Building, ZoomInfo } from '@/types/mapTypes';
 import { searchModalStyles } from './searchModelStyles';
 import useBuildings from '@/hooks/useBuildings';
@@ -26,8 +26,8 @@ const SearchModal: React.FC<searchModalProps> = ({
     const zoomInfo: ZoomInfo = {
       // Need to swap latitude and longitude due to the order in which the MapView component takes the corresponding parameter
       coordinates: [b.coordinates.longitude, b.coordinates.latitude],
-      zoomLevel: 15,
-      animationDuration: 50,
+      zoomLevel: 16,
+      animationDuration: 1000,
     };
     zoomFunction(zoomInfo);
   };
@@ -35,10 +35,12 @@ const SearchModal: React.FC<searchModalProps> = ({
   const displayBuildingsMenuItems = (buildings: Building[]) => {
     return buildings.map((b: Building) => {
       return (
-        <Menu.Item
+        <List.Item
           key={b.name}
           onPress={() => goToLocation(b)}
           title={b.name}
+          style={searchModalStyles.ListItem}
+          titleStyle={searchModalStyles.ListItemTitle}
         />
       );
     });
@@ -52,7 +54,9 @@ const SearchModal: React.FC<searchModalProps> = ({
         style={searchModalStyles.ModalWrapper}
         contentContainerStyle={searchModalStyles.ModalContainer}
       >
-        {displayBuildingsMenuItems(getRecommendations(query, 6))}
+        <List.Section style={searchModalStyles.ListSectionStyle}>
+          {displayBuildingsMenuItems(getRecommendations(query, 10))}
+        </List.Section>
       </Modal>
     </Portal>
   );

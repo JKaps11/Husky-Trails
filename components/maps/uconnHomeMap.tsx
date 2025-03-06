@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef, memo } from 'react';
-import { View } from 'react-native';
-import { ActivityIndicator } from 'react-native-paper';
 import {
   Camera,
   CameraRef,
@@ -36,21 +34,6 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
     }
   }, [assets]);
 
-  useEffect(() => {
-    if (cameraRef.current && isMapLoaded) {
-      console.log('attempting camera move');
-      cameraRef.current.setCamera({
-        centerCoordinate: zoomInfo.coordinates,
-        zoomLevel: zoomInfo.zoomLevel,
-        animationDuration: zoomInfo.animationDuration,
-      });
-    } else {
-      console.log('camera not working');
-    }
-  }, [zoomInfo, isMapLoaded]);
-
-  const centerCoordinate = [-72.2538, 41.8157];
-
   return (
     <MapView
       style={{ flex: 1 }}
@@ -63,9 +46,10 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
     >
       <Camera
         ref={cameraRef}
-        centerCoordinate={centerCoordinate}
-        animationDuration={0}
-        zoomLevel={13}
+        key={`${zoomInfo.coordinates[0]}_${zoomInfo.coordinates[1]}_${zoomInfo.zoomLevel}`}
+        centerCoordinate={zoomInfo.coordinates}
+        animationDuration={zoomInfo.animationDuration}
+        zoomLevel={zoomInfo.zoomLevel}
         // Optionally, constrain panning to the MBTiles bounds if your version supports it.
       />
       <VectorSource
