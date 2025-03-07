@@ -46,10 +46,7 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
       style={{ flex: 1 }}
       compassEnabled={false}
       attributionEnabled={false}
-      onDidFinishLoadingMap={() => {
-        console.log('Map finished loading');
-        setIsMapLoaded(true);
-      }}
+      onDidFinishLoadingMap={() => setIsMapLoaded(true)}
     >
       <Camera
         ref={cameraRef}
