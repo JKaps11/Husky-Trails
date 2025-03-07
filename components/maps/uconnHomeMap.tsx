@@ -25,8 +25,8 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
 
   const cameraRef: React.RefObject<CameraRef> = useRef<CameraRef>(null);
   const cameraBounds: CameraBounds = {
-    ne: [-72.249, 41.809], // Northeast corner of campus
-    sw: [-72.258, 41.807], // Southwest corner of campus
+    ne: [-72.24, 41.82], // Northeast corner of campus
+    sw: [-72.27, 41.8], // Southwest corner of campus
   };
 
   useEffect(() => {
@@ -72,8 +72,8 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
           sourceID="uconnSource"
           sourceLayerID="Buildings"
           style={{
-            fillColor: '#f0e68c', // A light khaki color
-            fillOpacity: 0.3,
+            fillColor: '#f8f9fa', // Very light neutral
+            fillOpacity: 0.4,
           }}
         />
 
@@ -83,51 +83,40 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
           sourceID="uconnSource"
           sourceLayerID="Buildings"
           style={{
-            lineColor: '#8B4513', // Color of the outline
-            lineWidth: 2,
-            lineOpacity: 0.5,
+            lineColor: '#6c757d', // Medium gray
+            lineWidth: 1.5,
+            lineOpacity: 0.8,
           }}
         />
-
         {/* Roads Layer */}
         <LineLayer
-          id="roads-layer"
           sourceID="uconnSource"
           sourceLayerID="Roads"
+          id="roads-layer"
           style={{
-            lineColor: '#555',
-            lineWidth: 3,
+            lineColor: '#495057', // Dark charcoal
+            lineWidth: [
+              'match',
+              ['get', 'type'], // If your data has road types
+              'primary',
+              4,
+              'secondary',
+              3,
+              2, // Default
+            ],
           }}
         />
-
         {/* Buildings Name Layer */}
         <SymbolLayer
           id="building-names-layer"
           sourceID="uconnSource"
           sourceLayerID="Buildings" // source layer with building names
           style={{
+            textColor: '#2b2d42', // Dark navy
+            textHaloColor: '#f8f9fa', // Matches building fill
+            textHaloWidth: 2,
+            textSize: 12,
             textField: ['get', 'name'],
-            textSize: 10,
-            textColor: '#333',
-            textHaloColor: '#fff',
-            textHaloWidth: 1,
-          }}
-        />
-
-        {/* Points Layer */}
-        <SymbolLayer
-          id="points-layer"
-          sourceID="uconnSource"
-          sourceLayerID="Points"
-          style={{
-            // Wrap the text expression with "format"
-            textField: ['format', ['get', 'name'], {}],
-            textSize: 10,
-            textColor: '#333',
-            textHaloColor: '#fff',
-            textHaloWidth: 1,
-            iconImage: 'marker-15',
-            iconSize: 1,
           }}
         />
       </VectorSource>
@@ -144,8 +133,8 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
             size={40}
             color="#000E2F"
             style={{
-              shadowColor: '#000',
-              shadowOffset: { width: 0, height: 2 },
+              shadowColor: '#2b2d42',
+              shadowOffset: { width: 2, height: 2 },
               shadowOpacity: 0.3,
               shadowRadius: 3,
             }}
