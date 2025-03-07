@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import buildingsData from '@/assets/maplist/uconnBuildings.json';
+import geojsonData from '@/assets/maplist/buildingsCentroid.json';
 import { Building } from '@/types/mapTypes';
 import Fuse from 'fuse.js';
 
@@ -10,7 +10,16 @@ export default function useBuildings() {
 
   useEffect(() => {
     try {
-      setBuildings(buildingsData);
+      // Map over the GeoJSON features to convert them to Building objects.
+      const buildingsArray = geojsonData.features.map((feature: any) => ({
+        name: feature.properties.name,
+        coordinates: {
+          // GeoJSON uses [longitude, latitude], so we swap the order.
+          latitude: feature.geometry.coordinates[1],
+          longitude: feature.geometry.coordinates[0],
+        },
+      }));
+      setBuildings(buildingsArray);
     } catch (err: any) {
       setError(err);
     } finally {
@@ -18,27 +27,25 @@ export default function useBuildings() {
     }
   }, []);
 
-  // Create a Fuse instance for fuzzy searching
+  // Create a Fuse instance for fuzzy searching.
   const fuse = useMemo(() => {
     return new Fuse(buildings, {
-      keys: ['name'], // Search within the 'name' property of each building.
-      threshold: 0.4, // Adjust threshold as needed; lower values make the search more strict.
+      keys: ['name'],
+      threshold: 0.4,
       includeScore: true,
     });
   }, [buildings]);
 
-  // Fuzzy search buildings by name (case-insensitive)
   const searchBuildings = (query: string): Building[] => {
     if (!query) return buildings;
     const results = fuse.search(query);
     return results.map((result) => result.item);
   };
 
-  // getRecommendations now uses Fuse.js for a fuzzy match.
   const getRecommendations = (search: string, count: number): Building[] => {
     if (buildings.length === 0) return [];
     if (!search) {
-      // If the search string is empty, return random recommendations.
+      // Return random recommendations.
       const shuffled = [...buildings].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, count);
     }

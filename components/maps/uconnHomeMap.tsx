@@ -7,9 +7,11 @@ import {
   FillLayer,
   LineLayer,
   SymbolLayer,
+  MarkerView,
 } from '@maplibre/maplibre-react-native';
 import { useAssets } from 'expo-asset';
 import { ZoomInfo } from '@/types/mapTypes';
+import { MaterialIcons } from '@expo/vector-icons';
 
 interface MapProps {
   zoomInfo: ZoomInfo;
@@ -50,6 +52,8 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
         centerCoordinate={zoomInfo.coordinates}
         animationDuration={zoomInfo.animationDuration}
         zoomLevel={zoomInfo.zoomLevel}
+        minZoomLevel={13}
+
         // Optionally, constrain panning to the MBTiles bounds if your version supports it.
       />
       <VectorSource
@@ -123,6 +127,27 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
           }}
         />
       </VectorSource>
+      {isMapLoaded && (
+        <MarkerView
+          key={`marker-${zoomInfo.coordinates.join('-')}`}
+          id="zoom-marker"
+          coordinate={zoomInfo.coordinates}
+          style={{ zIndex: 1000 }}
+          anchor={{ x: 0, y: 0 }} // Tip of the icon at coordinate
+        >
+          <MaterialIcons
+            name="location-pin"
+            size={40}
+            color="#000E2F"
+            style={{
+              shadowColor: '#000',
+              shadowOffset: { width: 0, height: 2 },
+              shadowOpacity: 0.3,
+              shadowRadius: 3,
+            }}
+          />
+        </MarkerView>
+      )}
     </MapView>
   );
 });
