@@ -8,6 +8,7 @@ import {
   LineLayer,
   SymbolLayer,
   MarkerView,
+  CameraBounds,
 } from '@maplibre/maplibre-react-native';
 import { useAssets } from 'expo-asset';
 import { ZoomInfo } from '@/types/mapTypes';
@@ -22,7 +23,11 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
   const [assets] = useAssets([require('../../assets/uconnVector.mbtiles')]);
   const [isMapLoaded, setIsMapLoaded] = useState<boolean>(false);
 
-  const cameraRef = useRef<CameraRef>(null);
+  const cameraRef: React.RefObject<CameraRef> = useRef<CameraRef>(null);
+  const cameraBounds: CameraBounds = {
+    ne: [-72.249, 41.809], // Northeast corner of campus
+    sw: [-72.258, 41.807], // Southwest corner of campus
+  };
 
   useEffect(() => {
     if (assets && assets[0]) {
@@ -53,8 +58,7 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
         animationDuration={zoomInfo.animationDuration}
         zoomLevel={zoomInfo.zoomLevel}
         minZoomLevel={13}
-
-        // Optionally, constrain panning to the MBTiles bounds if your version supports it.
+        maxBounds={cameraBounds}
       />
       <VectorSource
         id="uconnSource"
