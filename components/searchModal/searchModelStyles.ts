@@ -8,20 +8,18 @@ export const searchModalStyles = StyleSheet.create({
     flex: 1,
   },
   ModalWrapper: {
-    top: 70,
+    top: 55,
   },
   ListItem: {
-    color: COLORS.defaultText,
+    backgroundColor: COLORS.defaultText,
     borderRadius: '50px',
     borderColor: COLORS.primary,
-    borderWidth: 2,
+    borderBottomWidth: 1,
   },
   ListItemTitle: {
     color: COLORS.primary,
   },
   ListSectionStyle: {
-    borderRadius: '50px',
-    borderColor: COLORS.primary,
-    borderWidth: 2,
+    flex: 1,
   },
 });

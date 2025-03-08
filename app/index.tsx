@@ -46,7 +46,9 @@ const Index: React.FC = () => {
           edges={['left', 'right', 'bottom']}
         >
           <StatusBar hidden />
-          <View style={defaultStyles.topBar}>
+          <View
+            style={visibleModal ? defaultStyles.topBar2 : defaultStyles.topBar}
+          >
             {/* <Entypo.Button
             name="menu"
             size={30}
