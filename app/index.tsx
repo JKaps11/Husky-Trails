@@ -1,18 +1,21 @@
-import React from 'react';
-import CustomSearchBar from '@/components/searchBar/customSearchBar';
+import React, { useEffect } from 'react';
+import CustomSearchBar from '@/components/searchFeature/searchBar/customSearchBar';
 import { View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
 import { CustomTheme } from '@/constants/theme';
 import { defaultStyles } from './defaultStyles';
-import FilterButtons from '@/components/filterButtons/filterButtons';
 import UConnMap from '@/components/maps/uconnHomeMap';
-import SearchModal from '@/components/searchModal/searchModal';
+import SearchModal from '@/components/searchFeature/searchModal/searchModal';
 import { useState } from 'react';
-import { ZoomInfo } from '@/types/mapTypes';
+import { Filter, ZoomInfo } from '@/types/mapTypes';
+import DraggableMenu from '@/components/draggableMenu/draggableMenu';
+import FilterButtons from '@/components/filterFeature/filterButtons/filterButtons';
 
 const Index: React.FC = () => {
+  const [selectedFilter, setSelectedFilter] = useState<Filter>(undefined);
+  const setFilter = (filter: Filter) => setSelectedFilter(filter);
   const [visibleModal, setModalVisible] = useState<boolean>(false);
   const showModal = () => setModalVisible(true);
   const hideModal = () => setModalVisible(false);
@@ -23,11 +26,12 @@ const Index: React.FC = () => {
     setSearchQuery(query);
     return query;
   };
-  //TODO Not Working
+
   const onBuildingListItemPress: (query: string) => void = (query: string) => {
     setSearchQuery(query);
   };
 
+  // need to do a timeout here to stall state change
   const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
     coordinates: [-72.2548, 41.8087],
     zoomLevel: 15,
@@ -66,8 +70,9 @@ const Index: React.FC = () => {
             setQuery={onBuildingListItemPress}
             zoomFunction={zoomToLocation}
           />
-          <FilterButtons />
-          <UConnMap zoomInfo={zoomInfo} />
+          <FilterButtons setFilterState={setFilter} />
+          {selectedFilter && <DraggableMenu filter={selectedFilter} />}
+          <UConnMap zoomInfo={zoomInfo} filter={selectedFilter} />
         </SafeAreaView>
       </SafeAreaProvider>
     </PaperProvider>

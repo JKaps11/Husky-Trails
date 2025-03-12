@@ -1,3 +1,4 @@
+import { Filter } from '@/types/mapTypes';
 import {
   GestureResponderEvent,
   ViewStyle,
@@ -8,7 +9,7 @@ import { Animated } from 'react-native';
 
 type FabAction = {
   icon: string;
-  label?: string;
+  label?: Filter;
   color?: string;
   labelTextColor?: string;
   accessibilityLabel?: string;
@@ -25,7 +26,7 @@ type FabAction = {
 
 type FilterButtonOption = FabAction;
 
-export const filterButtonsOptions: FilterButtonOption[] = [
+const filterButtonsOptions: FilterButtonOption[] = [
   {
     label: 'Bus Stops',
     icon: 'bus',
@@ -53,4 +54,15 @@ export const filterButtonsOptions: FilterButtonOption[] = [
   },
 ];
 
-export default filterButtonsOptions;
+const getFilterButtonOptions = (
+  setFilterState: (filter: Filter) => void,
+): FilterButtonOption[] => {
+  return filterButtonsOptions.map((option) => ({
+    ...option,
+    onPress: (e: GestureResponderEvent) => {
+      setFilterState(option.label);
+    },
+  }));
+};
+
+export default getFilterButtonOptions;

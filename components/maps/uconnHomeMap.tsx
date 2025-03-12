@@ -11,14 +11,16 @@ import {
   CameraBounds,
 } from '@maplibre/maplibre-react-native';
 import { useAssets } from 'expo-asset';
-import { ZoomInfo } from '@/types/mapTypes';
+import { Filter, Marker, ZoomInfo } from '@/types/mapTypes';
 import { MaterialIcons } from '@expo/vector-icons';
+import getMarkerData from '@/utils/readStaticJson';
 
 interface MapProps {
   zoomInfo: ZoomInfo;
+  filter: Filter;
 }
 
-const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
+const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
   const [assetUri, setAssetUri] = useState<string | null>(null);
   const [assets] = useAssets([require('../../assets/uconnVector.mbtiles')]);
   const [isMapLoaded, setIsMapLoaded] = useState<boolean>(false);
@@ -40,6 +42,34 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
       }
     }
   }, [assets]);
+
+  const dispalyMapPins: (markers: Marker[]) => React.JSX.Element[] = (
+    markers: Marker[],
+  ) => {
+    return markers.map((marker: Marker) => {
+      return (
+        <MarkerView
+          key={marker.id}
+          id="zoom-marker"
+          coordinate={marker.coordinates}
+          style={{ zIndex: 1000 }}
+          anchor={{ x: 0, y: 0 }}
+        >
+          <MaterialIcons
+            name="location-pin"
+            size={40}
+            color="#000E2F"
+            style={{
+              shadowColor: '#2b2d42',
+              shadowOffset: { width: 2, height: 2 },
+              shadowOpacity: 0.3,
+              shadowRadius: 3,
+            }}
+          />
+        </MarkerView>
+      );
+    });
+  };
 
   return (
     <MapView
@@ -103,20 +133,24 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo }: MapProps) => {
             ],
           }}
         />
-        {/* Buildings Name Layer */}
-        <SymbolLayer
-          id="building-names-layer"
-          sourceID="uconnSource"
-          sourceLayerID="Buildings" // source layer with building names
-          style={{
-            textColor: '#2b2d42', // Dark navy
-            textHaloColor: '#f8f9fa', // Matches building fill
-            textHaloWidth: 2,
-            textSize: 12,
-            textField: ['get', 'name'],
-          }}
-        />
+        {filter === undefined && (
+          <SymbolLayer
+            id="building-names-layer"
+            sourceID="uconnSource"
+            sourceLayerID="Buildings" // source layer with building names
+            style={{
+              textColor: '#2b2d42', // Dark navy
+              textHaloColor: '#f8f9fa', // Matches building fill
+              textHaloWidth: 2,
+              textSize: 12,
+              textField: ['get', 'name'],
+            }}
+          />
+        )}
       </VectorSource>
+      {isMapLoaded &&
+        filter != undefined &&
+        dispalyMapPins(getMarkerData(filter))}
       {isMapLoaded && (
         <MarkerView
           key={`marker-${zoomInfo.coordinates.join('-')}`}

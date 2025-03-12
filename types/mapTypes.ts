@@ -8,3 +8,17 @@ export interface ZoomInfo {
   zoomLevel: number;
   animationDuration: number;
 }
+
+export interface Marker {
+  id: string;
+  name: string;
+  coordinates: [number, number];
+}
+
+export type Filter =
+  | 'Dining Halls'
+  | 'Bathrooms'
+  | 'Study Rooms'
+  | 'Sports Fields'
+  | 'Bus Stops'
+  | undefined;
