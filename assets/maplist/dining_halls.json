@@ -1,0 +1,44 @@
+{
+  "dining_halls": [
+    {
+      "name": "Connecticut Hall",
+      "latitude": 41.80568605421227,
+      "longitude": -72.24800245153331
+    },
+    {
+      "name": "Putnam Dining Hall",
+      "latitude": 41.805171161487735,
+      "longitude": -72.25882045504058
+    },
+    {
+      "name": "Gelfenbien Dining Hall",
+      "latitude": 41.813471474883386,
+      "longitude": -72.25423612598307
+    },
+    {
+      "name": "McMahon Dining Hall",
+      "latitude": 41.80374848465387,
+      "longitude": -72.25246713324559
+    },
+    {
+      "name": "North Dining Hall",
+      "latitude": 41.812142239273804,
+      "longitude": -72.2583874709656
+    },
+    {
+      "name": "Whitney Dining Hall",
+      "latitude": 41.80987449152713,
+      "longitude": -72.24750196042595
+    },
+    {
+      "name": "South Dining Hall",
+      "latitude": 41.80382693515556,
+      "longitude": -72.24866167541258
+    },
+    {
+      "name": "Northwest Dining Hall",
+      "latitude": 41.8113181088179,
+      "longitude": -72.2596211117033
+    }
+  ]
+}
