@@ -1,44 +1,116 @@
 {
-  "dining_halls": [
+  "type": "FeatureCollection",
+  "name": "dining_halls",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
     {
-      "name": "Connecticut Hall",
-      "latitude": 41.80568605421227,
-      "longitude": -72.24800245153331
+      "type": "Feature",
+      "properties": {
+        "name": "Connecticut Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.24800245153331,
+          41.80568605421227
+        ]
+      }
     },
     {
-      "name": "Putnam Dining Hall",
-      "latitude": 41.805171161487735,
-      "longitude": -72.25882045504058
+      "type": "Feature",
+      "properties": {
+        "name": "Putnam Dining Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.25882045504058,
+          41.805171161487735
+        ]
+      }
     },
     {
-      "name": "Gelfenbien Dining Hall",
-      "latitude": 41.813471474883386,
-      "longitude": -72.25423612598307
+      "type": "Feature",
+      "properties": {
+        "name": "Gelfenbien Dining Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.25423612598307,
+          41.813471474883386
+        ]
+      }
     },
     {
-      "name": "McMahon Dining Hall",
-      "latitude": 41.80374848465387,
-      "longitude": -72.25246713324559
+      "type": "Feature",
+      "properties": {
+        "name": "McMahon Dining Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.25246713324559,
+          41.80374848465387
+        ]
+      }
     },
     {
-      "name": "North Dining Hall",
-      "latitude": 41.812142239273804,
-      "longitude": -72.2583874709656
+      "type": "Feature",
+      "properties": {
+        "name": "North Dining Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.2583874709656,
+          41.812142239273804
+        ]
+      }
     },
     {
-      "name": "Whitney Dining Hall",
-      "latitude": 41.80987449152713,
-      "longitude": -72.24750196042595
+      "type": "Feature",
+      "properties": {
+        "name": "Whitney Dining Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.24750196042595,
+          41.80987449152713
+        ]
+      }
     },
     {
-      "name": "South Dining Hall",
-      "latitude": 41.80382693515556,
-      "longitude": -72.24866167541258
+      "type": "Feature",
+      "properties": {
+        "name": "South Dining Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.24866167541258,
+          41.80382693515556
+        ]
+      }
     },
     {
-      "name": "Northwest Dining Hall",
-      "latitude": 41.8113181088179,
-      "longitude": -72.2596211117033
+      "type": "Feature",
+      "properties": {
+        "name": "Northwest Dining Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.2596211117033,
+          41.8113181088179
+        ]
+      }
     }
   ]
 }
