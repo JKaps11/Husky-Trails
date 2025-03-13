@@ -1246,7 +1246,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Harry A. Gampel Pavilion"
+                "name": "[GAMP] Harry A. Gampel Pavilion"
             },
             "geometry": {
                 "type": "Point",
@@ -1259,7 +1259,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "[GAMP] Harry Grant Manchester Hall"
+                "name": "Harry Grant Manchester Hall"
             },
             "geometry": {
                 "type": "Point",
@@ -1584,7 +1584,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "J. Orlean Christian"
+                "name": "[ELL] Elliot Ballpark"
             },
             "geometry": {
                 "type": "Point",
@@ -2156,7 +2156,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Mark Edward Freitas Ice Forum"
+                "name": "[UVC] Mark Edward Freitas Ice Forum"
             },
             "geometry": {
                 "type": "Point",
@@ -2611,7 +2611,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "[FPF] Practice Field"
+                "name": "[RFC] Recreational Field Complex"
             },
             "geometry": {
                 "type": "Point",
