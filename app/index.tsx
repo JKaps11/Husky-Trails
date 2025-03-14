@@ -28,7 +28,7 @@ const Index: React.FC = () => {
     return query;
   };
 
-  const onBuildingListItemPress: (query: string) => void = (query: string) => {
+  const setSearchBarQuery: (query: string) => void = (query: string) => {
     setSearchQuery(query);
   };
 
@@ -38,6 +38,16 @@ const Index: React.FC = () => {
     zoomLevel: 15,
     animationDuration: 1000,
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setZoomInfo({
+        coordinates: [-72.2548, 41.8087],
+        zoomLevel: 15,
+        animationDuration: 1000,
+      });
+    }, 500); // Delay to allow the map to load
+  }, []);
 
   const zoomToLocation: (zi: ZoomInfo) => void = (zi: ZoomInfo) => {
     setZoomInfo(JSON.parse(JSON.stringify(zi)));
@@ -68,11 +78,18 @@ const Index: React.FC = () => {
             visible={visibleModal}
             hideModal={hideModal}
             query={searchQuery}
-            setQuery={onBuildingListItemPress}
+            setQuery={setSearchBarQuery}
             zoomFunction={zoomToLocation}
           />
           <FilterButtons setFilterState={setFilter} />
-          {selectedFilter && <DraggableMenu filter={selectedFilter} />}
+          {selectedFilter != undefined && (
+            <DraggableMenu
+              filter={selectedFilter}
+              setFilter={setFilter}
+              zoomFunction={zoomToLocation}
+              setQuery={setSearchBarQuery}
+            />
+          )}
           <UConnMap zoomInfo={zoomInfo} filter={selectedFilter} />
         </SafeAreaView>
       </SafeAreaProvider>

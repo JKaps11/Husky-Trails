@@ -43,34 +43,29 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
     }
   }, [assets]);
 
-  const dispalyMapPins: (markers: Marker[]) => React.JSX.Element[] = (
-    markers: Marker[],
-  ) => {
-    return markers.map((marker: Marker) => {
-      return (
-        <MarkerView
-          key={marker.id}
-          id="zoom-marker"
-          coordinate={marker.coordinates}
-          style={{ zIndex: 1000 }}
-          anchor={{ x: 0, y: 0 }}
-        >
-          <MaterialIcons
-            name="location-pin"
-            size={40}
-            color="#000E2F"
-            style={{
-              shadowColor: '#2b2d42',
-              shadowOffset: { width: 2, height: 2 },
-              shadowOpacity: 0.3,
-              shadowRadius: 3,
-            }}
-          />
-        </MarkerView>
-      );
-    });
+  const displayMapPins = (markers: Marker[]): React.JSX.Element[] => {
+    return markers.map((marker: Marker) => (
+      <MarkerView
+        key={`marker-${marker.id}`}
+        id={`marker-${marker.id}`}
+        coordinate={marker.coordinates}
+        style={{ zIndex: 1000 }}
+        anchor={{ x: 0, y: 0 }}
+      >
+        <MaterialIcons
+          name="location-pin"
+          size={40}
+          color="#000E2F"
+          style={{
+            shadowColor: '#2b2d42',
+            shadowOffset: { width: 2, height: 2 },
+            shadowOpacity: 0.3,
+            shadowRadius: 3,
+          }}
+        />
+      </MarkerView>
+    ));
   };
-
   return (
     <MapView
       style={{ flex: 1 }}
@@ -150,8 +145,8 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
       </VectorSource>
       {isMapLoaded &&
         filter != undefined &&
-        dispalyMapPins(getMarkerData(filter))}
-      {isMapLoaded && (
+        displayMapPins(getMarkerData(filter))}
+      {isMapLoaded && filter === undefined && (
         <MarkerView
           key={`marker-${zoomInfo.coordinates.join('-')}`}
           id="zoom-marker"

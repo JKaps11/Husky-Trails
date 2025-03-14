@@ -17,6 +17,9 @@ const draggableMenuStyles = StyleSheet.create({
     elevation: 10,
     zIndex: 5,
   },
+  itemContainerSelected: {
+    backgroundColor: '#007AFF', // blue color (iOS default blue)
+  },
   searchBarContainer: {
     height: 50, // fixed height in pixels
     marginBottom: 10,
