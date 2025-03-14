@@ -16,6 +16,7 @@ import FilterButtons from '@/components/filterFeature/filterButtons/filterButton
 const Index: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<Filter>(undefined);
   const setFilter = (filter: Filter) => setSelectedFilter(filter);
+
   const [visibleModal, setModalVisible] = useState<boolean>(false);
   const showModal = () => setModalVisible(true);
   const hideModal = () => setModalVisible(false);

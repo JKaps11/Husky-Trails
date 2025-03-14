@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   Animated,
   Dimensions,
@@ -12,6 +12,8 @@ import { Surface } from 'react-native-paper';
 import draggableMenuStyles from './draggableMenuStyle';
 import { Filter } from '@/types/mapTypes';
 import useFuzzySearch from '@/hooks/useFuzzySearch';
+import { SearchBar } from 'react-native-screens';
+import CustomSearchBar from '../searchFeature/searchBar/customSearchBar';
 
 interface DraggableMenuProps {
   filter: Filter;
@@ -24,7 +26,13 @@ const MAX_HEIGHT: number = SCREEN_HEIGHT * 0.7;
 const DraggableMenu: React.FC<DraggableMenuProps> = ({
   filter,
 }: DraggableMenuProps) => {
-  const getReccomendations = useFuzzySearch(filter);
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const onSearchBarType: (query: string) => string = (query: string) => {
+    setSearchQuery(query);
+    return query;
+  };
+
+  const { getRecommendations } = useFuzzySearch(filter);
 
   const animatedHeight: Animated.Value = useRef(
     new Animated.Value(MIN_HEIGHT),
@@ -71,7 +79,22 @@ const DraggableMenu: React.FC<DraggableMenuProps> = ({
       </Surface>
       <View style={draggableMenuStyles.content}>
         <View style={draggableMenuStyles.placeholder}>
-          <Animated.Text>Draggable Menu Content</Animated.Text>
+          <View style={draggableMenuStyles.searchBarContainer}>
+            <CustomSearchBar value={searchQuery} onType={onSearchBarType} />
+          </View>
+          <Animated.FlatList
+            data={getRecommendations(searchQuery, 6)}
+            keyExtractor={(item) => item.id.toString()} // ensure each item has a unique id
+            renderItem={({ item }) => (
+              <Animated.View style={draggableMenuStyles.itemContainer}>
+                <Animated.Text style={draggableMenuStyles.itemText}>
+                  {item.name}
+                </Animated.Text>
+              </Animated.View>
+            )}
+            // Optionally disable FlatList scrolling if it conflicts with dragging:
+            scrollEnabled={true}
+          />
         </View>
       </View>
     </Animated.View>

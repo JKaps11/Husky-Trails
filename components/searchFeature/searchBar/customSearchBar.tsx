@@ -1,29 +1,24 @@
-import * as React from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import { Searchbar } from 'react-native-paper';
 import { searchBarStyles } from './searchBarSyles';
-import { COLORS } from '@/constants/theme';
-import { useState } from 'react';
 
 interface CustomSearchBarProps {
   value: string;
   onType: (query: string) => void;
 }
 
-const CustomSearchBar: React.FC<CustomSearchBarProps> = ({
-  value,
-  onType,
-}: CustomSearchBarProps) => {
+const CustomSearchBar: React.FC<CustomSearchBarProps> = ({ value, onType }) => {
   return (
-    <View style={{ height: '70%', width: '80%' }}>
+    <View style={searchBarStyles.container}>
       <Searchbar
         placeholder="Search"
         onChangeText={onType}
         value={value}
         style={searchBarStyles.searchBar}
         inputStyle={searchBarStyles.searchBarText}
-        iconColor={COLORS.defaultText}
-        placeholderTextColor={COLORS.defaultText}
+        iconColor={searchBarStyles.searchBarText.color}
+        placeholderTextColor={searchBarStyles.searchBarText.color}
       />
     </View>
   );

@@ -27,8 +27,8 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
 
   const cameraRef: React.RefObject<CameraRef> = useRef<CameraRef>(null);
   const cameraBounds: CameraBounds = {
-    ne: [-72.24, 41.82], // Northeast corner of campus
-    sw: [-72.27, 41.8], // Southwest corner of campus
+    ne: [-72.235, 41.825], // Northeast corner of campus
+    sw: [-72.275, 41.75], // Southwest corner of campus
   };
 
   useEffect(() => {

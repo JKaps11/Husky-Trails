@@ -3,26 +3,31 @@ import { StyleSheet } from 'react-native';
 
 const draggableMenuStyles = StyleSheet.create({
   container: {
-    position: 'absolute', // position at bottom
+    position: 'absolute',
     bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: 'white',
+    width: '100%',
+    backgroundColor: '#fff',
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
-    // Elevation/shadow to appear above other content
+    overflow: 'hidden',
+    shadowColor: '#000', // iOS shadow
+    shadowOffset: { width: 0, height: -3 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
     elevation: 10,
     zIndex: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: -2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
+  },
+  searchBarContainer: {
+    height: 50, // fixed height in pixels
+    marginBottom: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   handle: {
-    padding: 10,
+    width: '100%',
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'transparent',
+    paddingVertical: 10,
+    backgroundColor: '#f0f0f0',
   },
   handleIndicator: {
     width: 40,
@@ -38,6 +43,15 @@ const draggableMenuStyles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  itemContainer: {
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+  },
+  itemText: {
+    fontSize: 16,
+    color: '#333',
   },
 });
 
