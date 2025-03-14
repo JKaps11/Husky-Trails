@@ -1,2506 +1,3769 @@
 {
-  "type": "FeatureCollection",
-  "name": "buildingsCentroid",
-  "crs": {
-    "type": "name",
-    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
-  },
-  "features": [
-    {
-      "type": "Feature",
-      "properties": { "name": "Mirror Lake" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247226829480979, 41.806929694528641]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Horsebarn Hill" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247353606522594, 41.817299490422698]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "George J. Sherman Family Sports Complex" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257010095641178, 41.806272419567868]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Fairfield Way" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252335832051784, 41.80733721867054]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot C" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.268216056651909, 41.81344839690086]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Music Library Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.244524480714745, 41.804750707341924]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee (Lot F)" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.26326155449371, 41.809917835958807]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "University of Connecticut" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256047990340193, 41.812244081641794]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Roger A. Gelfenbien Towers Dining Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254428433573437, 41.813431644439348]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Swan Lake" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252538963647496, 41.810973190011936]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Homer D. Babbidge Library" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251782200993304, 41.806624106909872]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Harry A. Gampel Pavilion" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254410657996942, 41.805276159078758]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "South Parking Garage" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254106591515907, 41.804224526210632]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "North Parking Garage" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25828754555647, 41.808978055100539]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Wilbur Cross Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251785364580272, 41.8091777909885]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Information Technology Engineering Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252848913699594, 41.806535563395222]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Jaime Homero Arjona Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248727964862454, 41.806259203630702]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Henry Ruthven Montieth Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249361133351243, 41.806983839840555]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Weston A. Bousfield Psychology Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250365107700716, 41.806590263527291]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Andre Schenker Lecture Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249788702701224, 41.807253876268561]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UConn Bookstore" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253414143808484, 41.804638287313217]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot Z" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253420670093902, 41.803223394933738]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot Y" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252421049112897, 41.802144999435136]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Art Ceramic Studio" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253060612888831, 41.804138711416641]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Academic Services Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252829976437269, 41.804260862576271]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Graduate by Hilton Storrs" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248838416607924, 41.802964499268946]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Student Union" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254711111387024, 41.80709983573464]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Francis L. Castleman Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254751692615685, 41.808148926865165]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Philip E. Austin Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251156340431436, 41.810438794458271]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Charles Lewis Beach Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250026509000165, 41.809448918513056]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Benjamin Franklin Koons Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251062627333894, 41.808533994865513]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "William Benton Museum of Art" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252797872453456, 41.808549884056006]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "John W. Rowe Center for Undergraduate Education"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252881213589845, 41.807706168920916]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "J. Louis von der Mehden Recital Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.245451479984169, 41.80498936184626]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot R" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.246171916074317, 41.804368277463226]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Storrsâ€“Mansfield Post Office" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.240229890310744, 41.802174492419468]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Augustus Storrs Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252515991539042, 41.809843018271941]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Carolyn Ladd Widmer Wing" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252293729809324, 41.809974073338161]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Walter Childs Wood Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253130651344605, 41.809223434406036]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mark Edward Freitas Ice Forum" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254730428288994, 41.800282281557948]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "John J. Budds Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249809073015825, 41.807835755534775]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Willis Nichols Hawley Armory" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250707654274748, 41.807694672293586]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Student Recreational Facility" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255521472136294, 41.806314285521459]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hugh S. Greer Fieldhouse" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256287377226442, 41.806958714756888]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Cheney Drive Open Space" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.261200622015025, 41.804982374859812]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "New Storrs Cemetery" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257055765000018, 41.813017635306586]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Old Storrs Burying Ground" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25119232388559, 41.81227978110919]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hillyndale Road Open Space" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.268985244897749, 41.800058898610509]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Little Lane Open Space" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.264147768538692, 41.80093769930938]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mansfield Substation" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.264475055276193, 41.80892559083437]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Harry L. Garrigus Suites" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257862872689685, 41.805201175408399]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Israel Putnam Refectory" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258881025737068, 41.805124348445275]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Susan V. Herbst Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25132056737543, 41.807442711293845]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Arthur B. Bronwell Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254943938366523, 41.808766896600929]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Engineering II" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255326312965181, 41.809121468469144]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Pratt & Whitney Engineering Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255513439782135, 41.809438970682841]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Albert Gurdon Gulley Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249904428489415, 41.808882201286245]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Family Studies Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248981019025393, 41.808640755052785]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Harry Grant Manchester Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.24827177907892, 41.80805819193683]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lawrence D. McHugh Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253420816550559, 41.807122929646951]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hilda May Williams Student Health Services" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253604673431568, 41.810004757912822]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UCONN Cogen Facility" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254366813037024, 41.809451197490404]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot D" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257001287113184, 41.8033392319009]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Wolff-Zackin Natatorium" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255074337310106, 41.805669414308269]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255939520443761, 41.807219680555214]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256867370320762, 41.807323492079739]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Gordon W. Tasker Admissions Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257031231777461, 41.80770921814738]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "University of Connecticut Foundation" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25776871280118, 41.807824860568218]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Burton Family Football Complex" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255130994524009, 41.803426272943213]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mark R. Shenkman Training Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254764122359163, 41.80259260042412]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Torrey Greenhouse #3" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256067892467044, 41.809910429110623]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Torrey Greenhouse #2" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255924565073812, 41.809958668371152]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Torrey Greenhouse #1" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255770795031538, 41.810008536521295]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "George Safford Torrey Life Sciences Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256031438812883, 41.810437402629532]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Gant North Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257461784194007, 41.809928481598178]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employees (Lot T)" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252958880057534, 41.813409531409548]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employees (Lot T)" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252713099306376, 41.813237711026396]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employees (Lot T)" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254571070868721, 41.814811937484691]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Resident Students (Lot T)" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255245378759881, 41.814004122331689]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot O" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248020536368415, 41.812415480313064]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Wilfred B. Young Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248281806100707, 41.812110688885646]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Ag Field" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247097039913669, 41.812262115894214]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Elizabeth Hicks Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248845029408912, 41.8115673020434]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Grange East Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248545207668215, 41.811222706159192]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Ratcliffe Hicks Building and Arena" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249449887351233, 41.812276972153121]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Biology/Physics Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256603501864021, 41.80991000635629]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot S" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.246813548288529, 41.803544261913608]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "George H. Hollister Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251990380157864, 41.804403891166572]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Joseph Wright Alsop Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251363007033035, 41.80479316754807]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lancaster Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251497519782532, 41.804070206419887]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "William Shakespeare Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251015770054707, 41.804366664771528]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258348794463785, 41.806863889644276]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.26101058864117, 41.810155255763569]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Central Warehouse" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.261265681078143, 41.810877877492629]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258154822011392, 41.810569662760422]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Charles Goodyear Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258489438746537, 41.810467520110102]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Benjamin and Rodney Hanks Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258928514383584, 41.810250878147968]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "James G. Batterson Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258647284369857, 41.810926138882742]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Simeon, Asa, and William Rogers Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259221806086785, 41.811275287149897]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Samuel W. Russell Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259428007933153, 41.81051789896653]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Anna M. Snow Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249406946566552, 41.804028543906746]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lewis B. Rome Commons" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248522216475649, 41.803931895307421]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Nellie Louise Wilson Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247310014315431, 41.804819127369392]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "J. Ray Ryan Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250688692215633, 41.803313692923069]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Elmer S. Watson Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250631985125082, 41.803826490952211]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "L. Richard Belden Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250096441350536, 41.80353930929261]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Willard C. Eddy Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250079469786016, 41.803076300730702]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Charles Raymond Brock Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250620470311659, 41.802806982546294]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Floriculture Greenhouse" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252007832014399, 41.812881345463879]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Thompson Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.261812855484237, 41.815357202706501]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hough Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.262287997578866, 41.815248699654688]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hubbard Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.262603621722263, 41.815805267069742]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Alan T. Busby Suites" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.260893102465005, 41.814447232663909]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Husky Village Building D" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255393395451023, 41.815588545951755]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Towers Student Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253993375458819, 41.813107766882794]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Dairy Barn" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251629120373607, 41.813738811434725]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251378708614382, 41.813491847715959]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Arthur L. Lorentzon Stables" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.244082717572383, 41.814237883361464]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.246273563433846, 41.812049947726273]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Horsebarn Hill Arena" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.243322632655676, 41.815594992732692]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Farm and Event Services" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.242366496660708, 41.815159086040431]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Kinesiology Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.240942500029988, 41.814857806428826]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Office of State Archaeology" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241237755349005, 41.815217399532472]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Institute of the Environment" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.240191782170925, 41.814868889846295]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Biobehavioral Science Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.240585269918668, 41.81549727550955]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Building 1" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.240299127518369, 41.815544220045254]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Building 2" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.240003580168604, 41.815625888806842]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Museum Annex" },
-      "geometry": { "type": "Point", "coordinates": [-72.24127615, 41.8155356] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Environmental Health and Safety Office" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.240864113659384, 41.815702520407335]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "David C. Phillips Communication Sciences Building"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248288395233246, 41.80245244794493]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Human Development Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247240757867345, 41.802049212531543]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "South Campus Chiller Plant" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247428271179473, 41.803237352308066]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Marcus Holcomb Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247973829522138, 41.810233038908663]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "M.Estella Sprague Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247260196379784, 41.809385680728958]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Commissary Warehouse" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.246785695019014, 41.810255737921487]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "President's Residence" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.245536153689585, 41.808069633690288]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lester E. Shippee Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.24467815287619, 41.806508989098248]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Merlin D. Bishop Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.243710324238037, 41.806862962720444]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "John Buckley Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.243880777758349, 41.805744256095224]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "The Daily Campus" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.243652507899768, 41.805346085486299]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Drama-Music Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.244715367632807, 41.804325512914446]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Nafe Katter Theater" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.24510995880506, 41.804069090298356]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Art Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.245634495610929, 41.803814039054338]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Music Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.245029066921859, 41.805289900124883]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lakeside Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252841411752314, 41.811858889472568]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Storrs Congregational Church" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250531910702648, 41.811938102549554]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Merle S. Klinck Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250490213531847, 41.812855006457596]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UConn Dairy Bar" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249722976714551, 41.813314198859089]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "George C. White Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249404490141131, 41.813170249357981]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Roy E. Jones Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248616883605223, 41.813694215844961]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.248760882181898, 41.813732680774052]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Agricultural Biotechnology Laboratory" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250517737803733, 41.813528089541101]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Advanced Technology Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250330554466316, 41.81329146617685]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Bio Science Complex" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250953039545522, 41.813077196745709]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hilltop Community Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259989926948919, 41.802605572781566]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Susette La Flesche Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258322003293031, 41.801395014576727]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Harriet Beecher Stowe Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.260469453570877, 41.803126442657188]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mildred French Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259356023010909, 41.80235224722702]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Prudence Crandall Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258897847156433, 41.801235111375433]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Maude Knapp Wheeler Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259273205045631, 41.800556400362559]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Sara Buek Crawford Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259784092145907, 41.800508669099614]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Chase Going Woodhouse Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258305044433158, 41.800569714298341]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Antonia Novello Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.26082836644656, 41.802771661082588]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Ella Grasso Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259971586970977, 41.803431298298655]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mary Ritter Beard Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258542462572294, 41.801913255212213]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Chien-Shiung Wu Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259918151898077, 41.80093380381777]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Alice Pattison Merritt Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259763824128711, 41.802197750054994]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mary McLeod Bethune Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259335232832711, 41.801758456144597]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UConn Facilities Operations" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.262367903942717, 41.810569781046567]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Motor Pool" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.262143486206128, 41.812093378947758]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mansfield Community Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.243695260363381, 41.800569118056096]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Audrey P. Beck Municipal Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.242491198481531, 41.80136371009781]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hope Lutheran Church" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.23960335000001, 41.8075213]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Parish House" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251216299581657, 41.811963250704771]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "St. Mark's Chapel" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253429986619921, 41.811939170720294]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Charles B. Gentry Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253852934268608, 41.808584150100778]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Werth Family Basketball Champions Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255416629597406, 41.804577285486616]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Islamic Center at UConn" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25211164706981, 41.812008747803901]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UConn Forest Fenton Tract" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241738835831001, 41.823022363728597]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Oliver Ellsworth Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259277540040884, 41.806311831763701]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Nathan Hale Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259358381196819, 41.805761963130401]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hartford Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257746600929423, 41.810766232117395]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "New London Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257958842708177, 41.811089377656963]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Windham Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258163845877021, 41.81140163207661]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Middlesex Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258368020295919, 41.811711835658876]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "New Haven Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256858069540883, 41.811229883841193]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Fairfield Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257192063078008, 41.811506394644724]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Litchfield Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257522258211523, 41.811747182414031]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Tolland Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257836467571764, 41.812008180977884]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "James L. McConaughy Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258497126802311, 41.812289186175867]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Robert A. Hurley Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258583002154182, 41.812034853744969]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot B" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.243410660467745, 41.806080590334616]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Brien McMahon Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252503488606663, 41.803597029047609]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Student Recreation Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25235941525878, 41.805172010684267]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Temporary Administrative Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255941433826976, 41.805124738437179]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Peter J. Werth Residence Tower" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258499444993134, 41.806081726035444]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Ted's Restaurant & Bar" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.2600477148263, 41.809011186757523]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mansfield Road" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250926498716538, 41.809512425395944]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "William H. Hall Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251979499570098, 41.808154163084517]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Crisscross XVI" },
-      "geometry": { "type": "Point", "coordinates": [-72.25217325, 41.8086406] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Edwina Whitney Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247397128269498, 41.809904558097244]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Cordial Storrs House" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247194334228141, 41.808898858511739]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "School of Business" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253526822722179, 41.805913415030183]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hillside Road" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254749963771161, 41.806464815306683]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Dove Tower and Inverted Pyramid" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252655738809594, 41.805993929379291]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Slip Edge Bis" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252749055110698, 41.809064165007591]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Northwest Dining Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259722515922959, 41.811455731853606]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Eli Terry Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259663894349686, 41.811031822033833]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Founders Green" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250620619808359, 41.809909639076515]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Louisa J. Rosebrooks Residence Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247583358160227, 41.804217338754398]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UConn Woodsman" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.24146615, 41.81470805]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Main Accumulation Area" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.265280715781543, 41.813297680480311]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Horticulture Garden" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255793791392676, 41.809735302818311]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Whetten Woods Protected Open Space" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.238974607033398, 41.804575896111992]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Batting and Pitching Facility" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257549504878227, 41.800142278582335]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee (Lot G)" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256063886145384, 41.805467788384362]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Sylvie Blake House" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.245969940257154, 41.807490065306901]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Macedonia Educational Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241639328535442, 41.805687616969777]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Three Hierarchs Greek Orthodox Chapel" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241833263612776, 41.805459041157725]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Storrs Automotive" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.242871094937016, 41.805808142288321]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Bioretention Basin" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253610909051218, 41.807392073779937]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Bioretention Basin" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250783480992965, 41.807013739538078]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Bioretention Basin" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251060827069267, 41.807609324030658]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Bioretention Basin" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251331094435869, 41.807860195716302]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Saint Thomas Aquinas Catholic Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25426835, 41.81225525]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Parish House" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253878794321935, 41.812382548148669]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Saint Thomas Aquinas Chapel" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25390645654133, 41.811956567020893]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Trachten-Zachs Hillel House" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254677710345234, 41.811733421082231]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Reclaimed Water Facility" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.265491424967919, 41.810763702891109]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UConn Water Pollution Control Facility" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.26462271664856, 41.811336719233751]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Sherman Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253611479796206, 41.813538411048867]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Webster Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253405560056166, 41.813545663052281]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Jefferson Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253116356297866, 41.813726617652136]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Colt Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253066101564784, 41.81387417767516]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Morgan Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254347907348603, 41.814103208518638]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Trumbull Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253921450317378, 41.813791131854515]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Beecher Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25474266736741, 41.814390512883769]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Vinton Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254531009133729, 41.814401134795744]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Kingston Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254014250188831, 41.814847327821546]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Allen Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25406344793592, 41.8146954020864]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Keller Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253708562642259, 41.814508560621057]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Fenwick Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25373854880938, 41.814352171838735]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Wade Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253571776223652, 41.814179248293073]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hamilton Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253357439694753, 41.814149178905886]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lafayette Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254123149403355, 41.814103017444104]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Sousa Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25392009232479, 41.813946269630449]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UConn Public Safety" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.260581637705386, 41.809753129237137]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Resident Student (Premium)" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249778183343437, 41.80362968316166]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Resident Student (Premium)" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249751834230878, 41.803005110475198]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Load Zone" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250663859559481, 41.80406145278512]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Raymond E. Baldwin Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258143103191117, 41.812285217034912]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "North Campus Dining Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.258309018857631, 41.812086596548468]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Load Zone" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251285890467614, 41.803994938591266]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Load Zone" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.250956380807423, 41.804206413601413]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Storrs Friends Meeting" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.264902531072096, 41.80698506533529]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Courtyard at Storrs" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.238848542981387, 41.801087787218457]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Charles S. Phelps House" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.249772960543893, 41.812888167572879]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Main Street Homes at Storrs Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.2399692131508, 41.804383116898912]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Esten House" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.246200489883449, 41.808673197322491]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Alexander the Great Theatre" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241050825827003, 41.806211506223818]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Price Chopper" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241520603541119, 41.802406720408591]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Downtown Storrs Parking Garage" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.242168598344534, 41.804762763771762]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Educational Playcare" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.240604328937721, 41.803460718541153]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Engineering Science Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254158295232656, 41.810187001963058]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Pharmacy/Biology Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255166369152946, 41.810074093879216]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Edward V. Gant Plaza" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257119396655526, 41.809598529106189]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Gant South Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256677711152747, 41.809296061147165]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Gant West Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257425064345881, 41.809326146982109]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Chemistry Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25389719531627, 41.810787491850327]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Wilbur O. Atwater Laboratory" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254923424918914, 41.810900199087818]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Nathan L. Whetten Graduate Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251998599381608, 41.80591376232173]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Thomas J. Dodd Research Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251093454706194, 41.805832552469703]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Valentine Meadow" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.242648166944562, 41.812555536411786]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Fine Arts Production Facility" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.245305531546151, 41.804342698033359]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Load Zone" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252767543059463, 41.803939438544219]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Zachs Family Fine Arts Administration Building"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.244663000998955, 41.804632616647439]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Load Zone" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.244465227605531, 41.804058063892334]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Load Zone" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.245742966394559, 41.803494335677833]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hellenic Museum" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241441680012386, 41.806016288937819]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "30 min" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.243856823392406, 41.805308951828543]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Farrell Fields" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.236675421754697, 41.802687585003873]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Hillside Environmental Education Park" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.270646284497673, 41.818606696933877]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Employee" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252327320804554, 41.812741485407152]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Commuting Student" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.244968214159528, 41.812884131387683]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot A" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247740970401608, 41.810440552785039]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Edwin O. Smith High School" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.244884499389499, 41.801979477211034]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Horse Unit 1" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.244225702196886, 41.813880540692615]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Alumni Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.257865252543311, 41.807211823657546]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Grange Shelter Pavilion" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.251580807941963, 41.81160014484729]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Orchard Acres Apartments" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.261570248437138, 41.804230080523944]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "J. Orlean Christian" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253168273550415, 41.80090709604471]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lodewick Visitors Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259586224993129, 41.80926138728924]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "The Thomas and Bette Wolff Family Park" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254553199830568, 41.805997989337385]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "University Planning, Design and Construction" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.262814258867991, 41.811152408718598]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Nash-Zimmer Transportation Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241934182320264, 41.804362057589806]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "North Eagleville Road Open Space" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.269753468030601, 41.805218412440816]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Mansfield Town Square" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.243544753247576, 41.804624551661057]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "College Square" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.261810238260566, 41.809775876272255]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Science 1 Research Building" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259725496715504, 41.80756128631532]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "UConn Supplemental Utility Plant" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.261355743807783, 41.807484074999373]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Lot N" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.259944007861236, 41.808402624215574]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Burrill Family Field" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256314025683523, 41.801507197624041]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Practice Field" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.256460470103008, 41.800402859651477]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Joseph J. Morrone Stadium" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.25490392824517, 41.801274561206505]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Rizza Performance Center" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.254125475983372, 41.801490988476615]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Whetten Woods" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.235501383183461, 41.806983813591231]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "University Plaza" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.241822541505911, 41.802843378346843]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Storrs Commons" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.242259421538535, 41.803348382855376]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Schwenk Family Garden" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.253221954982109, 41.810656076825531]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Catch I, II, III" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.252513633333336, 41.808833233333331]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "School of Pharmacy Medicinal Garden" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.255529279334453, 41.810047994172002]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "Connecticut Dinning Hall" },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-72.247696969983735, 41.805519017547461]
-      }
-    }
-  ]
+    "type": "FeatureCollection",
+    "name": "buildingsCentroid",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Academic Services Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25282997643727,
+                    41.80426086257627
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ATL] Advanced Technology Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25033055446632,
+                    41.81329146617685
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ag Field"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24709703991367,
+                    41.812262115894214
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ABL] Agricultural Biotechnology Laboratory"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25051773780373,
+                    41.8135280895411
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BSRH] Alan T. Busby Suites"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.260893102465,
+                    41.81444723266391
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GUL] Albert Gurdon Gulley Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24990442848942,
+                    41.808882201286245
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Alexander the Great Theatre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.241050825827,
+                    41.80621150622382
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Alice Pattison Merritt Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25976382412871,
+                    41.802197750054994
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Allen Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25406344793592,
+                    41.8146954020864
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ALUM] Alumni Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25786525254331,
+                    41.807211823657546
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SCHN] Andre Schenker Lecture Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24978870270122,
+                    41.80725387626856
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SSRH] Anna M. Snow Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24940694656655,
+                    41.804028543906746
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Antonia Novello Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26082836644656,
+                    41.80277166108259
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ARTB] Art Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24563449561093,
+                    41.80381403905434
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ACS] Art Ceramic Studio"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25306061288883,
+                    41.80413871141664
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BRON] Arthur B. Bronwell Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25494393836652,
+                    41.80876689660093
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[LOR] Arthur L. Lorentzon Stables"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24408271757238,
+                    41.814237883361464
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Audrey P. Beck Municipal Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24249119848153,
+                    41.80136371009781
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[STRS] Augustus Storrs Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25251599153904,
+                    41.80984301827194
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Batting and Pitching Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25754950487823,
+                    41.800142278582335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Beecher Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25474266736741,
+                    41.81439051288377
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NWRH] Benjamin Franklin Koons Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2510626273339,
+                    41.80853399486551
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[KNS] Benjamin and Rodney Hanks Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25892851438358,
+                    41.81025087814797
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BSC] Bio Science Complex"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25095303954552,
+                    41.81307719674571
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Biobehavioral Science Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24058526991867,
+                    41.81549727550955
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BPB] Biology/Physics Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25660350186402,
+                    41.80991000635629
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MRH] Brien McMahon Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25250348860666,
+                    41.80359702904761
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MB1] Building 1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24029912751837,
+                    41.815544220045254
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MB2] Building 2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2400035801686,
+                    41.81562588880684
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Burrill Family Field"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25631402568352,
+                    41.80150719762404
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BFFC] Burton Family Football Complex"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25513099452401,
+                    41.80342627294321
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WIDM] Carolyn Ladd Widmer Wing"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25229372980932,
+                    41.80997407333816
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Catch I, II, III"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25251363333334,
+                    41.80883323333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Central Warehouse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26126568107814,
+                    41.81087787749263
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GENT] Charles B. Gentry Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25385293426861,
+                    41.80858415010078
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NWRH] Charles Goodyear Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25848943874654,
+                    41.8104675201101
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BCH] Charles Lewis Beach Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25002650900016,
+                    41.809448918513056
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ARH] Charles Raymond Brock Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25062047031166,
+                    41.802806982546294
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Charles S. Phelps House"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2497729605439,
+                    41.81288816757288
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Chase Going Woodhouse Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25830504443316,
+                    41.80056971429834
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[CHM] Chemistry Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25389719531627,
+                    41.81078749185033
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Cheney Drive Open Space"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26120062201502,
+                    41.80498237485981
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Chien-Shiung Wu Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25991815189808,
+                    41.80093380381777
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "College Square"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26181023826057,
+                    41.809775876272255
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Colt Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25306610156478,
+                    41.81387417767516
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Commissary Warehouse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24678569501901,
+                    41.81025573792149
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Commuting Student"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24496821415953,
+                    41.81288413138768
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Connecticut Dinning Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24769696998374,
+                    41.80551901754746
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[CSH] Cordial Storrs House"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24719433422814,
+                    41.80889885851174
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Courtyard at Storrs"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.23884854298139,
+                    41.80108778721846
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Crisscross XVI"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25217325,
+                    41.8086406
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BARN] Dairy Barn"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25162912037361,
+                    41.813738811434725
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[PCSB] David C. Phillips Communication Sciences Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24828839523325,
+                    41.80245244794493
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Dove Tower and Inverted Pyramid"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2526557388096,
+                    41.80599392937929
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Downtown Storrs Parking Garage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24216859834453,
+                    41.80476276377176
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[DRMU] Drama-Music Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2447153676328,
+                    41.804325512914446
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Educational Playcare"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24060432893772,
+                    41.80346071854115
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GANT] Edward V. Gant Plaza"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25711939665553,
+                    41.80959852910619
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[EOS] Edwin O. Smith High School"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2448844993895,
+                    41.801979477211034
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WRH] Edwina Whitney Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2473971282695,
+                    41.809904558097244
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NWRH] Eli Terry Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25966389434969,
+                    41.81103182203383
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[EHRH] Elizabeth Hicks Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24884502940891,
+                    41.8115673020434
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Ella Grasso Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25997158697098,
+                    41.803431298298655
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ARH] Elmer S. Watson Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25063198512508,
+                    41.80382649095221
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Employee (Lot F)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26326155449371,
+                    41.80991783595881
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Employee (Lot G)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25606388614538,
+                    41.80546778838436
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Employees (Lot T)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25295888005753,
+                    41.81340953140955
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Employees (Lot T)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25271309930638,
+                    41.813237711026396
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Employees (Lot T)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25457107086872,
+                    41.81481193748469
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[E2] Engineering II"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25532631296518,
+                    41.809121468469144
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ESB] Engineering Science Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25415829523266,
+                    41.81018700196306
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[EHSO] Environmental Health and Safety Office"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24086411365938,
+                    41.815702520407335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Esten House"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24620048988345,
+                    41.80867319732249
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Fairfield Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25719206307801,
+                    41.811506394644724
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Fairfield Way"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25233583205178,
+                    41.80733721867054
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[FSB] Family Studies Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2489810190254,
+                    41.808640755052785
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[FES] Farm and Event Services"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24236649666071,
+                    41.81515908604043
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Farrell Fields"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2366754217547,
+                    41.80268758500387
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Fenwick Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25373854880938,
+                    41.814352171838735
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[FAC] Fine Arts Production Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24530553154615,
+                    41.80434269803336
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[FG] Floriculture Greenhouse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2520078320144,
+                    41.81288134546388
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[CAST] Francis L. Castleman Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25475169261568,
+                    41.808148926865165
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GN] Gant North Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.257461784194,
+                    41.80992848159818
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GS] Gant South Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25667771115275,
+                    41.809296061147165
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GW] Gant West Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25742506434588,
+                    41.80932614698211
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WITE] George C. White Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24940449014113,
+                    41.81317024935798
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WCRH] George H. Hollister Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25199038015786,
+                    41.80440389116657
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SFSC] George J. Sherman Family Sports Complex"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25701009564118,
+                    41.80627241956787
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TLS] George Safford Torrey Life Sciences Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25603143881288,
+                    41.81043740262953
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TSK] Gordon W. Tasker Admissions Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25703123177746,
+                    41.80770921814738
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GSH] Graduate by Hilton Storrs"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24883841660792,
+                    41.802964499268946
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GERH] Grange East Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24854520766822,
+                    41.81122270615919
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Grange Shelter Pavilion"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25158080794196,
+                    41.81160014484729
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Hamilton Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25335743969475,
+                    41.814149178905886
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Harriet Beecher Stowe Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26046945357088,
+                    41.80312644265719
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GAMP] Harry A. Gampel Pavilion"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25441065799694,
+                    41.80527615907876
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Harry Grant Manchester Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24827177907892,
+                    41.80805819193683
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GSRH] Harry L. Garrigus Suites"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25786287268969,
+                    41.8052011754084
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] Hartford Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25774660092942,
+                    41.810766232117395
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hellenic Museum"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24144168001239,
+                    41.80601628893782
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MONT] Henry Ruthven Montieth Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24936113335124,
+                    41.806983839840555
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WSH] Hilda May Williams Student Health Services"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25360467343157,
+                    41.81000475791282
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hillside Environmental Education Park"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.27064628449767,
+                    41.81860669693388
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hilltop Community Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25998992694892,
+                    41.802605572781566
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hillyndale Road Open Space"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26898524489775,
+                    41.80005889861051
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HBL] Homer D. Babbidge Library"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2517822009933,
+                    41.80662410690987
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HLC] Hope Lutheran Church"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.23960335000001,
+                    41.8075213
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HU1] Horse Unit 1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24422570219689,
+                    41.813880540692615
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Horsebarn Hill"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2473536065226,
+                    41.8172994904227
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HHA] Horsebarn Hill Arena"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24332263265568,
+                    41.81559499273269
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Horticulture Garden"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25579379139268,
+                    41.80973530281831
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[COA] Hough Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26228799757887,
+                    41.81524869965469
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[COA] Hubbard Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26260362172226,
+                    41.81580526706974
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GRE] Hugh S. Greer Fieldhouse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25628737722644,
+                    41.80695871475689
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HDC] Human Development Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24724075786735,
+                    41.80204921253154
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HV] Husky Village Building D"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25539339545102,
+                    41.815588545951755
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ITE] Information Technology Engineering Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2528489136996,
+                    41.80653556339522
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[IOE] Institute of the Environment"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24019178217092,
+                    41.814868889846295
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ICUC] Islamic Center at UConn"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25211164706981,
+                    41.8120087478039
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[PR] Israel Putnam Refectory"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25888102573707,
+                    41.805124348445275
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[VDM] J. Louis von der Mehden Recital Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24545147998417,
+                    41.80498936184626
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ELL] Elliot Ballpark"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25316827355041,
+                    41.80090709604471
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[JRB] J. Ray Ryan Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25068869221563,
+                    41.80331369292307
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ARJ] Jaime Homero Arjona Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24872796486245,
+                    41.8062592036307
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NWRH] James G. Batterson Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25864728436986,
+                    41.81092613888274
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] James L. McConaughy Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25849712680231,
+                    41.81228918617587
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Jefferson Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25311635629787,
+                    41.81372661765214
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BRH] John Buckley Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24388077775835,
+                    41.805744256095224
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BUD] John J. Budds Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24980907301583,
+                    41.807835755534775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ROWE] John W. Rowe Center for Undergraduate Education"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25288121358984,
+                    41.807706168920916
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MRN] Joseph J. Morrone Stadium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25490392824517,
+                    41.801274561206505
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WCRH] Joseph Wright Alsop Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25136300703304,
+                    41.80479316754807
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Keller Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25370856264226,
+                    41.81450856062106
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[KB] Kinesiology Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24094250002999,
+                    41.814857806428826
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Kingston Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25401425018883,
+                    41.814847327821546
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ARH] L. Richard Belden Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25009644135054,
+                    41.80353930929261
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[LAFA] Lafayette Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25412314940336,
+                    41.814103017444104
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[LAKE] Lakeside Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25284141175231,
+                    41.81185888947257
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WCRH] Lancaster Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25149751978253,
+                    41.80407020641989
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MCHU] Lawrence D. McHugh Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25342081655056,
+                    41.80712292964695
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SPRH] Lester E. Shippee Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24467815287619,
+                    41.80650898909825
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ROME] Lewis B. Rome Commons"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24852221647565,
+                    41.80393189530742
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] Litchfield Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25752225821152,
+                    41.81174718241403
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Little Lane Open Space"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26414776853869,
+                    41.80093769930938
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[LVC] Lodewick Visitors Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25958622499313,
+                    41.80926138728924
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot A"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24774097040161,
+                    41.81044055278504
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot B"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24341066046775,
+                    41.806080590334616
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot C"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26821605665191,
+                    41.81344839690086
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot D"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25700128711318,
+                    41.8033392319009
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot N"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25994400786124,
+                    41.808402624215574
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot O"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24802053636841,
+                    41.812415480313064
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot R"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24617191607432,
+                    41.804368277463226
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot S"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24681354828853,
+                    41.80354426191361
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot Y"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2524210491129,
+                    41.802144999435136
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lot Z"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2534206700939,
+                    41.80322339493374
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[RSRH] Louisa J. Rosebrooks Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24758335816023,
+                    41.8042173387544
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SRH] M.Estella Sprague Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24726019637978,
+                    41.80938568072896
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Macedonia Educational Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24163932853544,
+                    41.80568761696978
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MAB] Main Accumulation Area"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26528071578154,
+                    41.81329768048031
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Main Street Homes at Storrs Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2399692131508,
+                    41.80438311689891
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mansfield Community Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24369526036338,
+                    41.800569118056096
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mansfield Road"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25092649871654,
+                    41.809512425395944
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mansfield Substation"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2644750552762,
+                    41.80892559083437
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mansfield Town Square"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24354475324758,
+                    41.80462455166106
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MHRH] Marcus Holcomb Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24797382952214,
+                    41.81023303890866
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[UVC] Mark Edward Freitas Ice Forum"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.254730428289,
+                    41.80028228155795
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[STC] Mark R. Shenkman Training Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25476412235916,
+                    41.80259260042412
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mary McLeod Bethune Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25933523283271,
+                    41.8017584561446
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Mary Ritter Beard Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2585424625723,
+                    41.80191325521221
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Maude Knapp Wheeler Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25927320504563,
+                    41.80055640036256
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[KLIN] Merle S. Klinck Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25049021353185,
+                    41.812855006457596
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BISH] Merlin D. Bishop Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24371032423804,
+                    41.806862962720444
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] Middlesex Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25836802029592,
+                    41.811711835658876
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Mildred French Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25935602301091,
+                    41.80235224722702
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mirror Lake"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24722682948098,
+                    41.80692969452864
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Morgan Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2543479073486,
+                    41.81410320851864
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MP] Motor Pool"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26214348620613,
+                    41.81209337894776
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Museum Annex"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24127615,
+                    41.8155356
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MUSB] Music Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24502906692186,
+                    41.80528990012488
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Music Library Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24452448071474,
+                    41.804750707341924
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NKT] Nafe Katter Theater"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24510995880506,
+                    41.804069090298356
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nash-Zimmer Transportation Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24193418232026,
+                    41.804362057589806
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HRH] Nathan Hale Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25935838119682,
+                    41.8057619631304
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WGC] Nathan L. Whetten Graduate Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25199859938161,
+                    41.80591376232173
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WSRH] Nellie Louise Wilson Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24731001431543,
+                    41.80481912736939
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] New Haven Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25685806954088,
+                    41.81122988384119
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] New London Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25795884270818,
+                    41.81108937765696
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "New Storrs Cemetery"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25705576500002,
+                    41.813017635306586
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "North Campus Dining Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25830901885763,
+                    41.81208659654847
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "North Eagleville Road Open Space"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2697534680306,
+                    41.805218412440816
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "North Parking Garage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25828754555647,
+                    41.80897805510054
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Northwest Dining Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25972251592296,
+                    41.811455731853606
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Office of State Archaeology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.241237755349,
+                    41.81521739953247
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Old Storrs Burying Ground"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25119232388559,
+                    41.81227978110919
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HRH] Oliver Ellsworth Residence Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25927754004088,
+                    41.8063118317637
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Orchard Acres Apartments"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26157024843714,
+                    41.80423008052394
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[PARH] Parish House"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25121629958166,
+                    41.81196325070477
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WRT] Peter J. Werth Residence Tower"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25849944499313,
+                    41.806081726035444
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[PBB] Pharmacy/Biology Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25516636915295,
+                    41.810074093879216
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[AUST] Philip E. Austin Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25115634043144,
+                    41.81043879445827
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[RFC] Recreational Field Complex"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25646047010301,
+                    41.80040285965148
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[PWEB] Pratt & Whitney Engineering Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25551343978213,
+                    41.80943897068284
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "President's Residence"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24553615368959,
+                    41.80806963369029
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Price Chopper"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24152060354112,
+                    41.80240672040859
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Prudence Crandall Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25889784715643,
+                    41.80123511137543
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[RHBA] Ratcliffe Hicks Building and Arena"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24944988735123,
+                    41.81227697215312
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] Raymond E. Baldwin Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25814310319112,
+                    41.81228521703491
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[RWF] Reclaimed Water Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26549142496792,
+                    41.81076370289111
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Resident Student (Premium)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24977818334344,
+                    41.80362968316166
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Resident Student (Premium)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24975183423088,
+                    41.8030051104752
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Resident Students (Lot T)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25524537875988,
+                    41.81400412233169
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[RIZZ] Rizza Performance Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25412547598337,
+                    41.801490988476615
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] Robert A. Hurley Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25858300215418,
+                    41.81203485374497
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GTDH] Roger A. Gelfenbien Towers Dining Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25442843357344,
+                    41.81343164443935
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[JONS] Roy E. Jones Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24861688360522,
+                    41.81369421584496
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Saint Thomas Aquinas Catholic Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25426835,
+                    41.81225525
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[STA] Saint Thomas Aquinas Chapel"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25390645654133,
+                    41.81195656702089
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NWRH] Samuel W. Russell Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25942800793315,
+                    41.81051789896653
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Sara Buek Crawford Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2597840921459,
+                    41.800508669099614
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BUSN] School of Business"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25352682272218,
+                    41.80591341503018
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "School of Pharmacy Medicinal Garden"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25552927933445,
+                    41.810047994172
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Schwenk Family Garden"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25322195498211,
+                    41.81065607682553
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SCI1] Science 1 Research Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2597254967155,
+                    41.80756128631532
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Sherman Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2536114797962,
+                    41.81353841104887
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NWRH] Simeon, Asa, and William Rogers Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25922180608679,
+                    41.8112752871499
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Slip Edge Bis"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2527490551107,
+                    41.80906416500759
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Sousa Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25392009232479,
+                    41.81394626963045
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[CHIL] South Campus Chiller Plant"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24742827117947,
+                    41.80323735230807
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SPRK] South Parking Garage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2541065915159,
+                    41.80422452621063
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SMC] St. Mark's Chapel"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25342998661992,
+                    41.811939170720294
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Storrs Automotive"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24287109493702,
+                    41.80580814228832
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Storrs Commons"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24225942153853,
+                    41.803348382855376
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SCC] Storrs Congregational Church"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25053191070265,
+                    41.811938102549554
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[FMH] Storrs Friends Meeting"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2649025310721,
+                    41.80698506533529
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Storrs Mansfield Post Office"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24022989031074,
+                    41.80217449241947
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SRC] Student Recreation Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25235941525878,
+                    41.80517201068427
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Student Recreational Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2555214721363,
+                    41.80631428552146
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SU] Student Union"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25471111138702,
+                    41.80709983573464
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SHH] Susan V. Herbst Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25132056737543,
+                    41.807442711293845
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAC] Susette La Flesche Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25832200329303,
+                    41.80139501457673
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Swan Lake"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2525389636475,
+                    41.810973190011936
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sylvie Blake House"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24596994025715,
+                    41.8074900653069
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ted's Restaurant & Bar"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2600477148263,
+                    41.80901118675752
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Temporary Administrative Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25594143382698,
+                    41.80512473843718
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[DC] The Daily Campus"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24365250789977,
+                    41.8053460854863
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "The Thomas and Bette Wolff Family Park"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25455319983057,
+                    41.805997989337385
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[DODD] The Dodd Center for Human Rights"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2510934547062,
+                    41.8058325524697
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[COA] Thompson Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26181285548424,
+                    41.8153572027065
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GOC] Three Hierarchs Greek Orthodox Chapel"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24183326361278,
+                    41.805459041157725
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] Tolland Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25783646757176,
+                    41.812008180977884
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Torrey Greenhouse #1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25577079503154,
+                    41.810008536521295
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Torrey Greenhouse #2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25592456507381,
+                    41.80995866837115
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Torrey Greenhouse #3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25606789246704,
+                    41.80991042911062
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Towers Student Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25399337545882,
+                    41.813107766882794
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HILL] Trachten-Zachs Hillel House"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25467771034523,
+                    41.81173342108223
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Trumbull Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25392145031738,
+                    41.813791131854515
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "UCONN Cogen Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25436681303702,
+                    41.809451197490404
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BOOK] UConn Bookstore"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25341414380848,
+                    41.80463828731322
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[DB] UConn Dairy Bar"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24972297671455,
+                    41.81331419885909
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[FO] UConn Facilities Operations"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26236790394272,
+                    41.81056978104657
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "UConn Forest Fenton Tract"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.241738835831,
+                    41.8230223637286
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "UConn Public Safety"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26058163770539,
+                    41.80975312923714
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SUP] UConn Supplemental Utility Plant"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26135574380778,
+                    41.80748407499937
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WPCF] UConn Water Pollution Control Facility"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26462271664856,
+                    41.81133671923375
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "UConn Woodsman"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24146615,
+                    41.81470805
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "University Planning, Design and Construction"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.26281425886799,
+                    41.8111524087186
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "University Plaza"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24182254150591,
+                    41.80284337834684
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "University of Connecticut"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25604799034019,
+                    41.81224408164179
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "University of Connecticut Foundation"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25776871280118,
+                    41.80782486056822
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Valentine Meadow"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24264816694456,
+                    41.812555536411786
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Vinton Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25453100913373,
+                    41.814401134795744
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Wade Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25357177622365,
+                    41.81417924829307
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WOOD] Walter Childs Wood Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2531306513446,
+                    41.809223434406036
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TRH] Webster Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25340556005617,
+                    41.81354566305228
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WBCC] Werth Family Basketball Champions Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2554166295974,
+                    41.804577285486616
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BOUS] Weston A. Bousfield Psychology Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25036510770072,
+                    41.80659026352729
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Whetten Woods"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.23550138318346,
+                    41.80698381359123
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Whetten Woods Protected Open Space"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2389746070334,
+                    41.80457589611199
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WCB] Wilbur Cross Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25178536458027,
+                    41.8091777909885
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ATWR] Wilbur O. Atwater Laboratory"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25492342491891,
+                    41.81090019908782
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[YNG] Wilfred B. Young Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2482818061007,
+                    41.812110688885646
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ARH] Willard C. Eddy Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25007946978602,
+                    41.8030763007307
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WBMA] William Benton Museum of Art"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25279787245346,
+                    41.808549884056006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HALL] William H. Hall Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2519794995701,
+                    41.80815416308452
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WCRH] William Shakespeare Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2510157700547,
+                    41.80436666477153
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[HAWL] Willis Nichols Hawley Armory"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25070765427475,
+                    41.807694672293586
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[NCRH] Windham Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25816384587702,
+                    41.81140163207661
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WZN] Wolff-Zackin Natatorium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2550743373101,
+                    41.80566941430827
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ZFA] Zachs Family Fine Arts Administration Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.24466300099895,
+                    41.80463261664744
+                ]
+            }
+        }
+    ]
 }

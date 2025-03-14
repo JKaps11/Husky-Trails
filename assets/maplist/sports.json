@@ -1,0 +1,220 @@
+{
+    "type": "FeatureCollection",
+    "name": "buildingsCentroid",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[BFFC] Burton Family Football Complex"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25513099452401,
+                    41.80342627294321
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GAMP] Harry A. Gampel Pavilion"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25441065799694,
+                    41.80527615907876
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[GRE] Hugh S. Greer Fieldhouse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25628737722644,
+                    41.80695871475689
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[RIZZ] Rizza Performance Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25412547598337,
+                    41.801490988476615
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[STC] Mark R. Shenkman Training Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25476412235916,
+                    41.80259260042412
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[UVC] Mark Edward Freitas Ice Forum"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.254730428289,
+                    41.80028228155795
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WBCC] Werth Family Basketball Champions Center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2554166295974,
+                    41.804577285486616
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[WZN] Wolff-Zackin Natatorium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2550743373101,
+                    41.80566941430827
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[CSC] Burrill Family Field"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25631402568352,
+                    41.80150719762404
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[ELL] Elliot Ballpark"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25316827355041,
+                    41.80090709604471
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[FPF] Football Practice Fields"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25748944979739,
+                    41.804079029215345
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[MRN] Joseph J. Morrone Stadium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25490392824517,
+                    41.801274561206505
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[RFC] Recreational Field Complex"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25646047010301,
+                    41.80040285965148
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[SFSC] George J. Sherman Family Sports Complex"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25701009564118,
+                    41.80627241956787
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TC] Tennis Courts "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2646878198268,
+                    41.813628267119256
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "[TF] Track & Field Throwing Facilities"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.25738965877186,
+                    41.802139093865456
+                ]
+            }
+        }
+    ]
+}
