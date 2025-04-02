@@ -36,7 +36,7 @@ const Index: React.FC = () => {
   const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
     coordinates: [-72.2548, 41.8087],
     zoomLevel: 15,
-    animationDuration: 1000,
+    animationDuration: 2000,
   });
 
   useEffect(() => {
