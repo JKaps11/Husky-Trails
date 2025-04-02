@@ -16,6 +16,13 @@
   "jest": {
     "preset": "jest-expo"
   },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "listUnkownPackages": false
+      }
+    }
+  },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@mapbox/vector-tile": "^2.0.3",
