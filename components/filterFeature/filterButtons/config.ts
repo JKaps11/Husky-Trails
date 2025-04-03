@@ -1,4 +1,4 @@
-import { Filter } from '@/types/mapTypes';
+import { Filter, ZoomInfo } from '@/types/mapTypes';
 import {
   GestureResponderEvent,
   ViewStyle,
@@ -56,10 +56,17 @@ const filterButtonsOptions: FilterButtonOption[] = [
 
 const getFilterButtonOptions = (
   setFilterState: (filter: Filter) => void,
+  zoomToLocation: (zoomInfo: ZoomInfo) => void,
 ): FilterButtonOption[] => {
   return filterButtonsOptions.map((option) => ({
     ...option,
     onPress: (e: GestureResponderEvent) => {
+      e.preventDefault();
+      zoomToLocation({
+        coordinates: [-72.2548, 41.8087],
+        zoomLevel: 14,
+        animationDuration: 0,
+      });
       setFilterState(option.label);
     },
   }));
