@@ -21,7 +21,7 @@ const SearchModal: React.FC<searchModalProps> = ({
   const { getRecommendations } = useBuildings();
 
   const goToLocation: (b: Building) => void = (b: Building) => {
-    setQuery(b.name); //TODO Not Working
+    setQuery(b.name);
     hideModal();
     const zoomInfo: ZoomInfo = {
       // Need to swap latitude and longitude due to the order in which the MapView component takes the corresponding parameter

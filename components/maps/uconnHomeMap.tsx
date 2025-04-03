@@ -14,6 +14,7 @@ import { useAssets } from 'expo-asset';
 import { Filter, Marker, ZoomInfo } from '@/types/mapTypes';
 import { MaterialIcons } from '@expo/vector-icons';
 import getMarkerData from '@/utils/readStaticJson';
+import { Text } from 'react-native-paper';
 
 interface MapProps {
   zoomInfo: ZoomInfo;
@@ -52,17 +53,20 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
         style={{ zIndex: 1000 }}
         anchor={{ x: 0, y: 0 }}
       >
-        <MaterialIcons
-          name="location-pin"
-          size={40}
-          color="#000E2F"
-          style={{
-            shadowColor: '#2b2d42',
-            shadowOffset: { width: 2, height: 2 },
-            shadowOpacity: 0.3,
-            shadowRadius: 3,
-          }}
-        />
+        <>
+          <MaterialIcons
+            name="location-pin"
+            size={40}
+            color="#000E2F"
+            style={{
+              shadowColor: '#2b2d42',
+              shadowOffset: { width: 2, height: 2 },
+              shadowOpacity: 0.3,
+              shadowRadius: 3,
+            }}
+          />
+          {/*<  Text>Hello</Text>*/}
+        </>
       </MarkerView>
     ));
   };
