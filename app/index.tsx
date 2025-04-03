@@ -32,11 +32,10 @@ const Index: React.FC = () => {
     setSearchQuery(query);
   };
 
-  // need to do a timeout here to stall state change
   const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
     coordinates: [-72.2548, 41.8087],
     zoomLevel: 15,
-    animationDuration: 2000,
+    animationDuration: 0,
   });
 
   useEffect(() => {
@@ -46,11 +45,11 @@ const Index: React.FC = () => {
         zoomLevel: 15,
         animationDuration: 1000,
       });
-    }, 500); // Delay to allow the map to load
+    }, 1000); // Delay to allow the map to load
   }, []);
 
   const zoomToLocation: (zi: ZoomInfo) => void = (zi: ZoomInfo) => {
-    setZoomInfo(JSON.parse(JSON.stringify(zi)));
+    setZoomInfo(zi);
   };
 
   return (
@@ -81,7 +80,10 @@ const Index: React.FC = () => {
             setQuery={setSearchBarQuery}
             zoomFunction={zoomToLocation}
           />
-          <FilterButtons setFilterState={setFilter} />
+          <FilterButtons
+            setFilterState={setFilter}
+            zoomToLocation={zoomToLocation}
+          />
           {selectedFilter != undefined && (
             <DraggableMenu
               filter={selectedFilter}
