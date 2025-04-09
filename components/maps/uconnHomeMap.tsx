@@ -14,7 +14,6 @@ import { useAssets } from 'expo-asset';
 import { Filter, Marker, ZoomInfo } from '@/types/mapTypes';
 import { MaterialIcons } from '@expo/vector-icons';
 import getMarkerData from '@/utils/readStaticJson';
-import { Text } from 'react-native-paper';
 import CustomMarker from './customMarker';
 import { View } from 'react-native';
 
