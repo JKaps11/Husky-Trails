@@ -28,7 +28,7 @@
       [
         "expo-asset",
         {
-          "assets": ["./assets/uconn.mbtiles"]
+          "assets": ["./assets/uconnVector.mbtiles"]
         }
       ],
       "@maplibre/maplibre-react-native",
