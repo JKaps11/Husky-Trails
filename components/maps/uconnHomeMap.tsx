@@ -15,6 +15,8 @@ import { Filter, Marker, ZoomInfo } from '@/types/mapTypes';
 import { MaterialIcons } from '@expo/vector-icons';
 import getMarkerData from '@/utils/readStaticJson';
 import { Text } from 'react-native-paper';
+import CustomMarker from './customMarker';
+import { View } from 'react-native';
 
 interface MapProps {
   zoomInfo: ZoomInfo;
@@ -46,28 +48,7 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
 
   const displayMapPins = (markers: Marker[]): React.JSX.Element[] => {
     return markers.map((marker: Marker) => (
-      <MarkerView
-        key={`marker-${marker.id}`}
-        id={`marker-${marker.id}`}
-        coordinate={marker.coordinates}
-        style={{ zIndex: 1000 }}
-        anchor={{ x: 0, y: 0 }}
-      >
-        <>
-          <MaterialIcons
-            name="location-pin"
-            size={40}
-            color="#000E2F"
-            style={{
-              shadowColor: '#2b2d42',
-              shadowOffset: { width: 2, height: 2 },
-              shadowOpacity: 0.3,
-              shadowRadius: 3,
-            }}
-          />
-          {/*<  Text>Hello</Text>*/}
-        </>
-      </MarkerView>
+      <CustomMarker marker={marker} key={marker.id} />
     ));
   };
   return (
@@ -158,17 +139,32 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
           style={{ zIndex: 1000 }}
           anchor={{ x: 0, y: 0 }} // Tip of the icon at coordinate
         >
-          <MaterialIcons
-            name="location-pin"
-            size={40}
-            color="#000E2F"
-            style={{
-              shadowColor: '#2b2d42',
-              shadowOffset: { width: 2, height: 2 },
-              shadowOpacity: 0.3,
-              shadowRadius: 3,
-            }}
-          />
+          <View style={{ alignItems: 'center' }}>
+            <MaterialIcons
+              name="location-on" // Make sure the icon name is valid
+              size={40}
+              color="#000E2F"
+              style={{
+                shadowColor: '#2b2d42',
+                shadowOffset: { width: 2, height: 2 },
+                shadowOpacity: 0.3,
+                shadowRadius: 3,
+              }}
+            />
+            {
+              // TODO Text does not work
+              /* <Text
+                    style={{
+                      color: '#2b2d42',
+                      fontWeight: 'bold',
+                      fontSize: 12,
+                      marginTop: 4, // add some space between icon and text
+                    }}
+                  >
+                    {marker.name}
+                  </Text> */
+            }
+          </View>
         </MarkerView>
       )}
     </MapView>
