@@ -12,16 +12,31 @@ import { useState } from 'react';
 import { Filter, ZoomInfo } from '@/types/mapTypes';
 import DraggableMenu from '@/components/draggableMenu/draggableMenu';
 import FilterButtons from '@/components/filterFeature/filterButtons/filterButtons';
+import { NetworkState, useNetworkState } from 'expo-network';
+import NetworkAlert from '@/components/network/networkAlert';
 
 const Index: React.FC = () => {
-  const [selectedFilter, setSelectedFilter] = useState<Filter>(undefined);
-  const setFilter = (filter: Filter) => setSelectedFilter(filter);
+  //==============================[Network State]==============================
+  const networkState: NetworkState = useNetworkState();
 
+  //==============================[App States]=================================
+  const [selectedFilter, setSelectedFilter] = useState<Filter>(undefined);
   const [visibleModal, setModalVisible] = useState<boolean>(false);
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [snackbarVisible, setSnackbarVisible] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
+    coordinates: [-72.2548, 41.8087],
+    zoomLevel: 15,
+    animationDuration: 0,
+  });
+
+  //==============================[App State Altering Functions]=================================
   const showModal = () => setModalVisible(true);
   const hideModal = () => setModalVisible(false);
 
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  const setFilter = (filter: Filter) => setSelectedFilter(filter);
+
   const onSearchBarType: (query: string) => string = (query: string) => {
     showModal();
     setSearchQuery(query);
@@ -32,12 +47,7 @@ const Index: React.FC = () => {
     setSearchQuery(query);
   };
 
-  const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
-    coordinates: [-72.2548, 41.8087],
-    zoomLevel: 15,
-    animationDuration: 0,
-  });
-
+  //==============================[On App Startup]=================================
   useEffect(() => {
     setTimeout(() => {
       setZoomInfo({
@@ -92,6 +102,7 @@ const Index: React.FC = () => {
               setQuery={setSearchBarQuery}
             />
           )}
+          <NetworkAlert isConnected={networkState.isConnected} />
           <UConnMap zoomInfo={zoomInfo} filter={selectedFilter} />
         </SafeAreaView>
       </SafeAreaProvider>
