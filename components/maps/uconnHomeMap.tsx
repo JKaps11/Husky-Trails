@@ -21,6 +21,7 @@ import {
   requestForegroundPermissionsAsync,
 } from 'expo-location';
 import MapModal from './MapModal';
+import { COLORS } from '@/constants/theme';
 
 interface MapProps {
   zoomInfo: ZoomInfo;
@@ -239,9 +240,9 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
           >
             <View style={{ alignItems: 'center' }}>
               <MaterialIcons
-                name="my-location"
+                name="navigation"
                 size={28}
-                color="#007AFF"
+                color={COLORS.primaryO}
                 style={{
                   backgroundColor: 'white',
                   borderRadius: 14,
