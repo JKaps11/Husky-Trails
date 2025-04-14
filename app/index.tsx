@@ -12,19 +12,17 @@ import { useState } from 'react';
 import { Filter, ZoomInfo } from '@/types/mapTypes';
 import DraggableMenu from '@/components/draggableMenu/draggableMenu';
 import FilterButtons from '@/components/filterFeature/filterButtons/filterButtons';
-import { NetworkState, useNetworkState } from 'expo-network';
 import NetworkAlert from '@/components/network/networkAlert';
+import { useLiveNetworkState } from '@/hooks/useLiveNetworkState';
 
 const Index: React.FC = () => {
   //==============================[Network State]==============================
-  const networkState: NetworkState = useNetworkState();
+  const isConnected: boolean | undefined = useLiveNetworkState();
 
   //==============================[App States]=================================
   const [selectedFilter, setSelectedFilter] = useState<Filter>(undefined);
   const [visibleModal, setModalVisible] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [snackbarVisible, setSnackbarVisible] = useState(false);
-  const [snackbarMessage, setSnackbarMessage] = useState('');
   const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
     coordinates: [-72.2548, 41.8087],
     zoomLevel: 15,
@@ -102,7 +100,7 @@ const Index: React.FC = () => {
               setQuery={setSearchBarQuery}
             />
           )}
-          <NetworkAlert isConnected={networkState.isConnected} />
+          <NetworkAlert isConnected={isConnected} />
           <UConnMap zoomInfo={zoomInfo} filter={selectedFilter} />
         </SafeAreaView>
       </SafeAreaProvider>
