@@ -32,16 +32,16 @@ const filterButtonsOptions: FilterButtonOption[] = [
     icon: 'bus',
     onPress: () => console.log('Pressed bus'),
   },
-  {
-    label: 'Study Rooms',
-    icon: 'book',
-    onPress: () => console.log('Pressed study room'),
-  },
-  {
-    label: 'Bathrooms',
-    icon: 'toilet',
-    onPress: () => console.log('Pressed bathroom'),
-  },
+  // {
+  //   label: 'Study Rooms',
+  //   icon: 'book',
+  //   onPress: () => console.log('Pressed study room'),
+  // },
+  // {
+  //   label: 'Bathrooms',
+  //   icon: 'toilet',
+  //   onPress: () => console.log('Pressed bathroom'),
+  // },
   {
     label: 'Dining Halls',
     icon: 'silverware-fork',
