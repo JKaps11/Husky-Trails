@@ -68,39 +68,73 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
   useEffect(() => {
     (async () => {
       const askPermission = async () => {
-        const { status } = await requestForegroundPermissionsAsync();
-        if (status !== 'granted') {
+        try {
+          const { status } = await requestForegroundPermissionsAsync();
+          console.log('Permission status:', status);
+          return status === 'granted';
+        } catch (e) {
+          console.error('Permission request error:', e);
           return false;
         }
-        return true;
       };
 
-      const permissionGranted = await askPermission();
-
-      if (!permissionGranted) {
-        // Try one more time — user may have hit deny by mistake
-        const secondTry = await askPermission();
-
-        if (!secondTry) {
-          // Still denied → show modal
-          showModalWithMessage(
-            'Location access is required to show your current position on the map. Please enable location permissions in your device settings.',
-          );
-          return;
+      try {
+        const permissionGranted = await askPermission();
+        if (!permissionGranted) {
+          const secondTry = await askPermission();
+          if (!secondTry) {
+            console.warn('Permission denied after second try');
+            showModalWithMessage(
+              'Location access is required to show your current position on the map. Please enable location permissions in your device settings.',
+            );
+            return;
+          }
         }
-      }
 
-      // Permission is granted by here
-      const location = await getCurrentPositionAsync({});
-      const { latitude, longitude } = location.coords;
-      console.log('User location:', { latitude, longitude });
+        console.log('Getting current position...');
+        const location = await getCurrentPositionAsync(); // ← no timeout param
+        console.log('Location received:', location);
 
-      if (isOnCampus(longitude, latitude)) {
-        setUserLocation([longitude, latitude]);
-      } else {
-        showModalWithMessage(
-          'To use location features, please reopen the app while on campus.',
-        );
+        const { latitude, longitude } = location.coords;
+        console.log('User coordinates:', { latitude, longitude });
+
+        if (
+          isNaN(latitude) ||
+          isNaN(longitude) ||
+          latitude === 0 ||
+          longitude === 0
+        ) {
+          console.warn('Invalid coordinates detected');
+          throw new Error('Invalid coordinates returned');
+        }
+
+        const onCampus = isOnCampus(longitude, latitude);
+        console.log('Is on campus?', onCampus);
+
+        if (onCampus) {
+          console.log('Setting user location');
+          setUserLocation([longitude, latitude]);
+        } else {
+          console.log('User is off campus — showing modal');
+          showModalWithMessage(
+            'To use location features, please reopen the app while on campus.',
+          );
+        }
+      } catch (err: any) {
+        console.error('Location fetch failed:', err);
+
+        if (
+          err?.message?.toLowerCase()?.includes('timeout') ||
+          err?.code === 3
+        ) {
+          showModalWithMessage(
+            'We couldn’t get your location in time. Please try again outdoors or check your GPS connection.',
+          );
+        } else {
+          showModalWithMessage(
+            'An error occurred while getting your location. Please check your device settings and try again.',
+          );
+        }
       }
     })();
   }, []);
