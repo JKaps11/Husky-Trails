@@ -10,7 +10,6 @@ import {
   MarkerView,
   CameraBounds,
 } from '@maplibre/maplibre-react-native';
-import { useAssets } from 'expo-asset';
 import { Filter, Marker, ZoomInfo } from '@/types/mapTypes';
 import { MaterialIcons } from '@expo/vector-icons';
 import getMarkerData from '@/utils/readStaticJson';
@@ -30,8 +29,7 @@ interface MapProps {
 
 const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
   //==============================================[Initialize Map State]=========================================
-  const [assetUri, setAssetUri] = useState<string | null>(null);
-  const [assets] = useAssets([require('../../assets/uconnVector.mbtiles')]);
+  const MAP_API_ENDPOINT = ["https://cse-4939w-mapping-routes-qlq8.onrender.com/tiles/{z}/{x}/{y}.pbf"]
   const [isMapLoaded, setIsMapLoaded] = useState<boolean>(false);
   const [userLocation, setUserLocation] = useState<[number, number] | null>(
     null,
@@ -139,19 +137,6 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
     })();
   }, []);
 
-  //==============================================[Load map with expo assets]==============================================
-  useEffect(() => {
-    if (assets && assets[0]) {
-      const localUri = assets[0].localUri || assets[0].uri;
-      if (localUri) {
-        const cleanedUri = localUri.startsWith('file://')
-          ? localUri.replace('file://', '')
-          : localUri;
-        setAssetUri(cleanedUri);
-      }
-    }
-  }, [assets]);
-
   //==============================================[Utility Functions]==============================================
   const displayMapPins = (markers: Marker[]): React.JSX.Element[] => {
     return markers.map((marker: Marker) => (
@@ -178,7 +163,7 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
         />
         <VectorSource
           id="uconnSource"
-          tileUrlTemplates={[`mbtiles:///${assetUri}`]}
+          tileUrlTemplates={MAP_API_ENDPOINT}
           minZoomLevel={0}
           maxZoomLevel={12}
         >
