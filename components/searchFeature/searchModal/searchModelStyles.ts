@@ -10,6 +10,9 @@ export const searchModalStyles = StyleSheet.create({
   ModalWrapper: {
     top: 55,
   },
+  ModalWrapperRouteMode: {
+    top: '20%',
+  },
   ListItem: {
     backgroundColor: COLORS.defaultText,
     borderRadius: '50px',
@@ -21,5 +24,9 @@ export const searchModalStyles = StyleSheet.create({
   },
   ListSectionStyle: {
     flex: 1,
+  },
+  Button: {
+    backgroundColor: COLORS.primary,
+    color: COLORS.defaultText,
   },
 });

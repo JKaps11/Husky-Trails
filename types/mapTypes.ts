@@ -7,6 +7,7 @@ export interface ZoomInfo {
   coordinates: [number, number];
   zoomLevel: number;
   animationDuration: number;
+  markerLocation?: [number, number];
 }
 
 export interface Marker {
@@ -14,6 +15,14 @@ export interface Marker {
   name: string;
   coordinates: [number, number];
 }
+
+export interface RouteInfo {
+  transportationMethod: Transportation;
+  startingLocation: Building;
+  destination: Building;
+}
+
+export type Transportation = 'Walking' | 'Driving' | 'Biking';
 
 export type Filter =
   | 'Dining Halls'

@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+//==============================================[Imports]==============================================
+import React, { useEffect, useState } from 'react';
 import CustomSearchBar from '@/components/searchFeature/searchBar/customSearchBar';
 import { View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -8,53 +9,108 @@ import { CustomTheme } from '@/constants/theme';
 import { defaultStyles } from './defaultStyles';
 import UConnMap from '@/components/maps/uconnHomeMap';
 import SearchModal from '@/components/searchFeature/searchModal/searchModal';
-import { useState } from 'react';
 import { Filter, ZoomInfo } from '@/types/mapTypes';
 import DraggableMenu from '@/components/draggableMenu/draggableMenu';
 import FilterButtons from '@/components/filterFeature/filterButtons/filterButtons';
-import NetworkAlert from '@/components/network/networkAlert';
 import { useLiveNetworkState } from '@/hooks/useLiveNetworkState';
 import RouteButton from '@/components/routingFeature/routeButton';
-import RouteTopBar from '@/components/routingFeature/routeTopBar';
+import { useRouteSearch } from '@/hooks/useRouteSearch';
+import OfflineScreen from '@/components/network/offlineScreen';
+import RouteStartPopup from '@/components/routingFeature/routeStartPopup/routeStartPopup';
+import RouteTopBar from '@/components/routingFeature/routeTopBar/routeTopBar';
 
+//==============================================[Component]==============================================
 const Index: React.FC = () => {
-  //==============================[Network State]==============================
+  //==============================[Network]=================================
   const isConnected: boolean | undefined = useLiveNetworkState();
 
-  //==============================[App States]=================================
-  const [selectedFilter, setSelectedFilter] = useState<Filter>(undefined);
+  //==============================[Modals + Zoom]=================================
   const [visibleModal, setModalVisible] = useState<boolean>(false);
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [routeMode, setRouteMode] = useState<boolean>(false);
+  const showModal = () => setModalVisible(true);
+  const hideModal = () => setModalVisible(false);
+
   const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
     coordinates: [-72.2548, 41.8087],
     zoomLevel: 15,
     animationDuration: 0,
   });
 
-  //==============================[App State Altering Functions]=================================
-  const showModal = () => setModalVisible(true);
-  const hideModal = () => setModalVisible(false);
+  const [centerMarkerVisible, setCenterMarkerVisible] =
+    useState<boolean>(false);
 
+  const zoomToLocation: (zi: ZoomInfo, showMarker?: boolean) => void = (
+    zi,
+    showMarker = false,
+  ) => {
+    setZoomInfo(zi);
+    setCenterMarkerVisible(showMarker);
+  };
+
+  //==============================[Filter Feature Functions]=================================
+  const [selectedFilter, setSelectedFilter] = useState<Filter>(undefined);
   const setFilter = (filter: Filter) => setSelectedFilter(filter);
 
-  const setToRouteMode = () => setRouteMode((prevState) => !prevState);
+  //==============================[Route Feature Functions]=================================
+  const [routeMode, setRouteMode] = useState<boolean>(false);
 
+  const setToRouteMode = () => {
+    setRouteMode((prev) => !prev);
+  };
+
+  const {
+    routeInfo,
+    routeSearchQuery,
+    setRouteSearchQuery,
+    routeModalVisible,
+    showRouteSearchModalFor,
+    hideRouteModal,
+    selectRouteBuilding,
+    updateRouteFieldText,
+    setTransportationMethod,
+    routeLineCoords,
+    startSelected,
+    endSelected,
+    clearRoute,
+  } = useRouteSearch(() => setZoomInfo);
+
+  const routingSearchModalProps = {
+    visible: routeModalVisible,
+    routeMode: true,
+    hideModal: hideRouteModal,
+    query: routeSearchQuery,
+    setQuery: setRouteSearchQuery,
+    zoomFunction: () => {},
+    routeFunction: selectRouteBuilding,
+    setCenterMarkerToNotVisible: () => {},
+  };
+
+  const showRoutePopup = startSelected && endSelected;
+
+  useEffect(clearRoute, [routeMode]);
+
+  //==============================[Regular Search Feature Functions]=================================
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const onSearchBarType: (query: string) => string = (query: string) => {
     showModal();
     setSearchQuery(query);
     return query;
   };
-
   const setSearchBarQuery: (query: string) => void = (query: string) => {
     setSearchQuery(query);
   };
 
-  const zoomToLocation: (zi: ZoomInfo) => void = (zi: ZoomInfo) => {
-    setZoomInfo(zi);
+  const regularSearchModalProps = {
+    visible: visibleModal,
+    routeMode: false,
+    hideModal: hideModal,
+    query: searchQuery,
+    setQuery: setSearchBarQuery,
+    zoomFunction: (zi: ZoomInfo) => zoomToLocation(zi, true),
+    routeFunction: () => {},
+    setCenterMarkerToNotVisible: () => setCenterMarkerVisible(false),
   };
 
-  //==============================[On App Startup]=================================
+  //==============================[On Component Mount]=================================
   useEffect(() => {
     setTimeout(() => {
       setZoomInfo({
@@ -62,16 +118,16 @@ const Index: React.FC = () => {
         zoomLevel: 15,
         animationDuration: 1000,
       });
-    }, 1000); // Delay to allow the map to load
+    }, 1000);
   }, []);
 
-  const getTopBarStyle = () => {
-    if (visibleModal) {
-      return defaultStyles.topBar2;
-    } else {
-      return defaultStyles.topBar;
-    }
-  };
+  const searchModalProps = routeMode
+    ? routingSearchModalProps
+    : regularSearchModalProps;
+
+  if (!isConnected) return <OfflineScreen />;
+
+  //==============================[Render]=================================
   return (
     <PaperProvider theme={CustomTheme}>
       <SafeAreaProvider>
@@ -80,42 +136,66 @@ const Index: React.FC = () => {
           edges={['left', 'right', 'bottom']}
         >
           <StatusBar hidden />
-
-          <View style={getTopBarStyle()}>
-            {!routeMode && (
+          {!routeMode && (
+            <View
+              style={
+                visibleModal ? defaultStyles.topBar2 : defaultStyles.topBar
+              }
+            >
               <CustomSearchBar
                 alternate={false}
                 value={searchQuery}
                 onType={onSearchBarType}
+                onFocus={() => {}}
               />
-            )}
-          </View>
-
-          <SearchModal
-            visible={visibleModal}
-            hideModal={hideModal}
-            query={searchQuery}
-            setQuery={setSearchBarQuery}
-            zoomFunction={zoomToLocation}
-          />
+            </View>
+          )}
+          <SearchModal {...searchModalProps} />
 
           <RouteButton setToRouteMode={setToRouteMode} />
-          {routeMode && <RouteTopBar />}
+          {routeMode && (
+            <RouteTopBar
+              routeTopBarMode={!showRoutePopup}
+              routeInfo={routeInfo}
+              clearRoute={clearRoute}
+              onType={updateRouteFieldText}
+              onSearchFieldFocus={showRouteSearchModalFor}
+              onTransportationChange={setTransportationMethod}
+            />
+          )}
+          {showRoutePopup && routeMode && (
+            <RouteStartPopup
+              startName={routeInfo.startingLocation.name}
+              endName={routeInfo.destination.name}
+              method={routeInfo.transportationMethod}
+              onChangeMethod={setTransportationMethod}
+              onStart={() => console.log('Start directions')}
+              onClear={clearRoute}
+            />
+          )}
 
-          <FilterButtons
-            setFilterState={setFilter}
-            zoomToLocation={zoomToLocation}
-          />
+          {!routeMode && (
+            <FilterButtons
+              setFilterState={setFilter}
+              zoomToLocation={zoomToLocation}
+            />
+          )}
+
           {selectedFilter != undefined && (
             <DraggableMenu
               filter={selectedFilter}
               setFilter={setFilter}
-              zoomFunction={zoomToLocation}
+              zoomFunction={(zi: ZoomInfo) => zoomToLocation(zi, true)}
               setQuery={setSearchBarQuery}
             />
           )}
-          <NetworkAlert isConnected={isConnected} />
-          <UConnMap zoomInfo={zoomInfo} filter={selectedFilter} />
+
+          <UConnMap
+            zoomInfo={zoomInfo}
+            filter={selectedFilter}
+            routeLine={routeLineCoords}
+            centerMarkerVisible={centerMarkerVisible}
+          />
         </SafeAreaView>
       </SafeAreaProvider>
     </PaperProvider>

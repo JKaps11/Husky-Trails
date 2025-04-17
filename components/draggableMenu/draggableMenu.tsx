@@ -106,7 +106,12 @@ const DraggableMenu: React.FC<DraggableMenuProps> = ({
       </Surface>
       <View style={draggableMenuStyles.content}>
         <View style={draggableMenuStyles.searchBarContainer}>
-          <CustomSearchBar value={searchQuery} onType={onSearchBarType} />
+          <CustomSearchBar
+            value={searchQuery}
+            onType={onSearchBarType}
+            alternate={false}
+            onFocus={() => {}}
+          />
         </View>
         <Animated.FlatList
           data={getRecommendations(searchQuery, 6).map((marker) => ({
