@@ -14,6 +14,8 @@ import DraggableMenu from '@/components/draggableMenu/draggableMenu';
 import FilterButtons from '@/components/filterFeature/filterButtons/filterButtons';
 import NetworkAlert from '@/components/network/networkAlert';
 import { useLiveNetworkState } from '@/hooks/useLiveNetworkState';
+import RouteButton from '@/components/routingFeature/routeButton';
+import RouteTopBar from '@/components/routingFeature/routeTopBar';
 
 const Index: React.FC = () => {
   //==============================[Network State]==============================
@@ -23,6 +25,7 @@ const Index: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<Filter>(undefined);
   const [visibleModal, setModalVisible] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [routeMode, setRouteMode] = useState<boolean>(false);
   const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
     coordinates: [-72.2548, 41.8087],
     zoomLevel: 15,
@@ -35,6 +38,8 @@ const Index: React.FC = () => {
 
   const setFilter = (filter: Filter) => setSelectedFilter(filter);
 
+  const setToRouteMode = () => setRouteMode((prevState) => !prevState);
+
   const onSearchBarType: (query: string) => string = (query: string) => {
     showModal();
     setSearchQuery(query);
@@ -43,6 +48,10 @@ const Index: React.FC = () => {
 
   const setSearchBarQuery: (query: string) => void = (query: string) => {
     setSearchQuery(query);
+  };
+
+  const zoomToLocation: (zi: ZoomInfo) => void = (zi: ZoomInfo) => {
+    setZoomInfo(zi);
   };
 
   //==============================[On App Startup]=================================
@@ -56,10 +65,13 @@ const Index: React.FC = () => {
     }, 1000); // Delay to allow the map to load
   }, []);
 
-  const zoomToLocation: (zi: ZoomInfo) => void = (zi: ZoomInfo) => {
-    setZoomInfo(zi);
+  const getTopBarStyle = () => {
+    if (visibleModal) {
+      return defaultStyles.topBar2;
+    } else {
+      return defaultStyles.topBar;
+    }
   };
-
   return (
     <PaperProvider theme={CustomTheme}>
       <SafeAreaProvider>
@@ -68,19 +80,17 @@ const Index: React.FC = () => {
           edges={['left', 'right', 'bottom']}
         >
           <StatusBar hidden />
-          <View
-            style={visibleModal ? defaultStyles.topBar2 : defaultStyles.topBar}
-          >
-            {/* <Entypo.Button
-            name="menu"
-            size={30}
-            color={COLORS.defaultText}
-            backgroundColor="#00000000"
-            iconStyle={{ margin: 0 }}
-          />
-          */}
-            <CustomSearchBar value={searchQuery} onType={onSearchBarType} />
+
+          <View style={getTopBarStyle()}>
+            {!routeMode && (
+              <CustomSearchBar
+                alternate={false}
+                value={searchQuery}
+                onType={onSearchBarType}
+              />
+            )}
           </View>
+
           <SearchModal
             visible={visibleModal}
             hideModal={hideModal}
@@ -88,6 +98,10 @@ const Index: React.FC = () => {
             setQuery={setSearchBarQuery}
             zoomFunction={zoomToLocation}
           />
+
+          <RouteButton setToRouteMode={setToRouteMode} />
+          {routeMode && <RouteTopBar />}
+
           <FilterButtons
             setFilterState={setFilter}
             zoomToLocation={zoomToLocation}

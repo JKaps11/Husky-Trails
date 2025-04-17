@@ -29,7 +29,9 @@ interface MapProps {
 
 const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
   //==============================================[Initialize Map State]=========================================
-  const MAP_API_ENDPOINT = ["https://cse-4939w-mapping-routes-qlq8.onrender.com/tiles/{z}/{x}/{y}.pbf"]
+  const MAP_API_ENDPOINT = [
+    'https://cse-4939w-mapping-routes-qlq8.onrender.com/tiles/{z}/{x}/{y}.pbf',
+  ];
   const [isMapLoaded, setIsMapLoaded] = useState<boolean>(false);
   const [userLocation, setUserLocation] = useState<[number, number] | null>(
     null,
@@ -250,7 +252,7 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
         )}
 
         {/* 👤 User location marker */}
-        {userLocation && (
+        {userLocation && isMapLoaded && (
           <MarkerView
             id="user-location"
             coordinate={userLocation}
@@ -276,11 +278,13 @@ const UConnMap: React.FC<MapProps> = memo(({ zoomInfo, filter }: MapProps) => {
           </MarkerView>
         )}
       </MapView>
-      <MapModal
-        visible={showModal}
-        message={modalMessage}
-        onClose={() => setShowModal(false)}
-      />
+      {isMapLoaded && (
+        <MapModal
+          visible={showModal}
+          message={modalMessage}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </>
   );
 });

@@ -11,7 +11,15 @@ export const searchBarStyles = StyleSheet.create({
     width: '100%',
     backgroundColor: COLORS.primary,
   },
+  alternateSearchBar: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: COLORS.defaultText,
+  },
   searchBarText: {
     color: COLORS.defaultText,
+  },
+  alternateSearchBarText: {
+    color: COLORS.primary,
   },
 });

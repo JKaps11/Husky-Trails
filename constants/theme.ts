@@ -4,6 +4,7 @@ export const COLORS = {
   primaryO: 'rgba(0, 14, 47, 0.8)',
   primary: '#000E2F',
   defaultText: '#FFFFFF',
+  tertiary: '#E4002B',
 };
 
 export const CustomTheme = {
