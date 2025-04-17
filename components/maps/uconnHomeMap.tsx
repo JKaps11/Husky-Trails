@@ -31,20 +31,26 @@ interface MapProps {
   filter: Filter;
   routeLine?: [number, number][];
   centerMarkerVisible?: boolean;
+  userLocation: [number, number] | null;
+  setUserLocation: (coords: [number, number] | null) => void;
+  showModalWithMessage: (msg: string) => void;
 }
 
 const UConnMap: React.FC<MapProps> = memo(
-  ({ zoomInfo, filter, routeLine, centerMarkerVisible = false }: MapProps) => {
+  ({
+    zoomInfo,
+    filter,
+    routeLine,
+    centerMarkerVisible = false,
+    userLocation,
+    setUserLocation,
+    showModalWithMessage,
+  }: MapProps) => {
     //==============================================[Map Initialization State]==============================================
     const MAP_API_ENDPOINT = [
       'https://cse-4939w-mapping-routes-qlq8.onrender.com/tiles/{z}/{x}/{y}.pbf',
     ];
     const [isMapLoaded, setIsMapLoaded] = useState<boolean>(false);
-    const [userLocation, setUserLocation] = useState<[number, number] | null>(
-      null,
-    );
-    const [showModal, setShowModal] = useState(false);
-    const [modalMessage, setModalMessage] = useState('');
 
     const cameraRef: React.RefObject<CameraRef> = useRef<CameraRef>(null);
     const cameraBounds: CameraBounds = {
@@ -58,12 +64,6 @@ const UConnMap: React.FC<MapProps> = memo(
     };
 
     //==============================================[Location Permissions + Handling]==============================================
-    const showModalWithMessage = (msg: string) => {
-      setTimeout(() => {
-        setModalMessage(msg);
-        setShowModal(true);
-      }, 500);
-    };
 
     const isOnCampus = (lon: number, lat: number): boolean => {
       const withinLon = lon >= campusBounds.sw[0] && lon <= campusBounds.ne[0];
@@ -322,15 +322,6 @@ const UConnMap: React.FC<MapProps> = memo(
             </MarkerView>
           )}
         </MapView>
-
-        {/* Location Error Modal */}
-        {isMapLoaded && (
-          <MapModal
-            visible={showModal}
-            message={modalMessage}
-            onClose={() => setShowModal(false)}
-          />
-        )}
       </>
     );
   },

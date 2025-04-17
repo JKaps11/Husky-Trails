@@ -18,16 +18,30 @@ import { useRouteSearch } from '@/hooks/useRouteSearch';
 import OfflineScreen from '@/components/network/offlineScreen';
 import RouteStartPopup from '@/components/routingFeature/routeStartPopup/routeStartPopup';
 import RouteTopBar from '@/components/routingFeature/routeTopBar/routeTopBar';
+import MapModal from '@/components/maps/MapModal';
 
 //==============================================[Component]==============================================
 const Index: React.FC = () => {
   //==============================[Network]=================================
   const isConnected: boolean | undefined = useLiveNetworkState();
+  const [userLocation, setUserLocation] = useState<[number, number] | null>(
+    null,
+  );
 
   //==============================[Modals + Zoom]=================================
   const [visibleModal, setModalVisible] = useState<boolean>(false);
   const showModal = () => setModalVisible(true);
   const hideModal = () => setModalVisible(false);
+
+  const [showMapModal, setShowMapModal] = useState(false);
+  const [mapModalMessage, setMapModalMessage] = useState('');
+
+  const showMapModalWithMessage = (msg: string) => {
+    setTimeout(() => {
+      setMapModalMessage(msg);
+      setShowMapModal(true);
+    }, 500);
+  };
 
   const [zoomInfo, setZoomInfo] = useState<ZoomInfo>({
     coordinates: [-72.2548, 41.8087],
@@ -85,6 +99,16 @@ const Index: React.FC = () => {
   };
 
   const showRoutePopup = startSelected && endSelected;
+
+  const onRouteStart = () => {
+    if (userLocation === null) {
+      showMapModalWithMessage(
+        'You need to be on Campus for this feature to work',
+      );
+      setRouteMode(false);
+      return;
+    }
+  };
 
   useEffect(clearRoute, [routeMode]);
 
@@ -169,7 +193,7 @@ const Index: React.FC = () => {
               endName={routeInfo.destination.name}
               method={routeInfo.transportationMethod}
               onChangeMethod={setTransportationMethod}
-              onStart={() => console.log('Start directions')}
+              onStart={onRouteStart}
               onClear={clearRoute}
             />
           )}
@@ -190,11 +214,21 @@ const Index: React.FC = () => {
             />
           )}
 
+          {/* Location Error/ Network Error Modal */}
+          <MapModal
+            visible={showMapModal}
+            message={mapModalMessage}
+            onClose={() => setShowMapModal(false)}
+          />
+
           <UConnMap
             zoomInfo={zoomInfo}
             filter={selectedFilter}
             routeLine={routeLineCoords}
             centerMarkerVisible={centerMarkerVisible}
+            userLocation={userLocation}
+            setUserLocation={setUserLocation}
+            showModalWithMessage={showMapModalWithMessage}
           />
         </SafeAreaView>
       </SafeAreaProvider>
