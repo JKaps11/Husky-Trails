@@ -24,10 +24,35 @@ import MapModal from '@/components/maps/MapModal';
 const Index: React.FC = () => {
   //==============================[Network]=================================
   const isConnected: boolean | undefined = useLiveNetworkState();
+
+    //==============================[User Location + Navigating]=================================
   const [userLocation, setUserLocation] = useState<[number, number] | null>(
     null,
   );
 
+  /**
+ * Checks whether user location is available.
+ * @returns true if user is on campus and has selected "Your Location" start or destination.
+ */
+  const isUsingUserLocation: () => boolean = () => {
+    return (userLocation != null) && (routeInfo.startingLocation.name === "Your Location" || routeInfo.destination.name === "Your Location")
+  }
+
+  const onValidUserLocation = (f: (userLocation: [number, number]) => void) => {
+    userLocation && f(userLocation)
+  }
+
+  const setUseUserLocation = () => onValidUserLocation(setStartingLocationToUserLocation);
+
+  const onRouteStart = () => {
+    if (userLocation === null) {
+      showMapModalWithMessage(
+        'You need to be on Campus for this feature to work',
+      );
+      setRouteMode(false);
+      return;
+    }
+  };
   //==============================[Modals + Zoom]=================================
   const [visibleModal, setModalVisible] = useState<boolean>(false);
   const showModal = () => setModalVisible(true);
@@ -85,6 +110,7 @@ const Index: React.FC = () => {
     startSelected,
     endSelected,
     clearRoute,
+    setStartingLocationToUserLocation
   } = useRouteSearch(() => setZoomInfo);
 
   const routingSearchModalProps = {
@@ -96,19 +122,10 @@ const Index: React.FC = () => {
     zoomFunction: () => {},
     routeFunction: selectRouteBuilding,
     setCenterMarkerToNotVisible: () => {},
+    onValidUserLocation: onValidUserLocation,
   };
 
   const showRoutePopup = startSelected && endSelected;
-
-  const onRouteStart = () => {
-    if (userLocation === null) {
-      showMapModalWithMessage(
-        'You need to be on Campus for this feature to work',
-      );
-      setRouteMode(false);
-      return;
-    }
-  };
 
   useEffect(clearRoute, [routeMode]);
 
@@ -132,6 +149,7 @@ const Index: React.FC = () => {
     zoomFunction: (zi: ZoomInfo) => zoomToLocation(zi, true),
     routeFunction: () => {},
     setCenterMarkerToNotVisible: () => setCenterMarkerVisible(false),
+    onValidUserLocation: onValidUserLocation,
   };
 
   //==============================[On Component Mount]=================================
@@ -195,6 +213,8 @@ const Index: React.FC = () => {
               onChangeMethod={setTransportationMethod}
               onStart={onRouteStart}
               onClear={clearRoute}
+              isUsingUserLocation={isUsingUserLocation}
+              setInitalStartToUserLocation = {setUseUserLocation}
             />
           )}
 

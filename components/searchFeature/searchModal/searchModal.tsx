@@ -14,6 +14,7 @@ interface SearchModalProps {
   zoomFunction: (zi: ZoomInfo) => void;
   routeFunction: (b: Building) => void;
   setCenterMarkerToNotVisible: () => void;
+  onValidUserLocation: (f:(userLocation: [number, number]) => void) => void;
 }
 
 //==============================================[Component]==============================================
@@ -26,8 +27,10 @@ const SearchModal: React.FC<SearchModalProps> = ({
   zoomFunction,
   routeFunction,
   setCenterMarkerToNotVisible = () => {},
+  onValidUserLocation
+  
 }: SearchModalProps) => {
-  const { getRecommendations } = useBuildings();
+  const { getRecommendations, addUserLocationToReccomendations } = useBuildings();
 
   //==============================================[Handlers]==============================================
   const goToLocation = (b: Building) => {
@@ -57,6 +60,9 @@ const SearchModal: React.FC<SearchModalProps> = ({
       />
     ));
   };
+
+  onValidUserLocation(addUserLocationToReccomendations);
+  const buidlingRecommendations: Building[] = getRecommendations(query, 10)
 
   //==============================================[Render]==============================================
   return (
@@ -89,7 +95,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
           }}
         />
         <List.Section style={searchModalStyles.ListSectionStyle}>
-          {displayBuildingsMenuItems(getRecommendations(query, 10))}
+          {displayBuildingsMenuItems(buidlingRecommendations)}
         </List.Section>
       </Modal>
     </Portal>

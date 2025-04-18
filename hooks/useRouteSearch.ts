@@ -59,7 +59,7 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
 
       const data = await res.json();
 
-      if (!data.coordinates || !Array.isArray(data.coordinates)) {
+        if (!data.coordinates || !Array.isArray(data.coordinates)) {
         console.error('Invalid route data:', data);
         return;
       }
@@ -119,7 +119,29 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
     setActiveRouteField(null);
   };
 
-  //==============================================[Input Handling]==============================================
+  //==============================================[Functions for User]============================================== 
+   /**
+   * Sets the starting location in route info to the user location or the center of campus
+   * @param userLocation Coordinates for where the user is located
+   * @returns nothing if userLocation is null or not available
+   */
+   const setStartingLocationToUserLocation = (userLocation: [number, number]) => {
+    const location: Building = {
+      name: 'Your Location',
+      coordinates: {
+        longitude: userLocation.at(1) ?? 72.2454,
+        latitude: userLocation.at(0) ?? 41.6135,
+      },
+    };
+  
+    setRouteInfo((prev) => ({
+      ...prev,
+      startingLocation: location,
+    }));
+  };
+  
+//==============================================[Input Handling]==============================================
+
   const clearRoute = () => {
     setRouteInfo({
       transportationMethod: 'Walking',
@@ -199,5 +221,6 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
     startSelected,
     endSelected,
     clearRoute,
+    setStartingLocationToUserLocation
   };
 }

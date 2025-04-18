@@ -36,6 +36,17 @@ export default function useBuildings() {
     });
   }, [buildings]);
 
+  const addUserLocationToReccomendations = (userLocation: [number, number]) => {
+    const location: Building = {
+      name: 'Your Location',
+      coordinates: {
+        longitude: userLocation.at(1) ?? 72.2454,
+        latitude: userLocation.at(0) ?? 41.6135,
+      },
+    };
+    setBuildings((buildings: Building[]) => buildings.concat(location))
+  }
+
   const searchBuildings = (query: string): Building[] => {
     if (!query) return buildings;
     const results = fuse.search(query);
@@ -53,5 +64,5 @@ export default function useBuildings() {
     return results.map((result) => result.item).slice(0, count);
   };
 
-  return { buildings, loading, error, searchBuildings, getRecommendations };
+  return { buildings, loading, error, searchBuildings, getRecommendations, addUserLocationToReccomendations };
 }
