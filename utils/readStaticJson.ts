@@ -1,6 +1,7 @@
 import busGeoJsonData from '@/assets/maplist/bus.json';
 import sportsGeoJsonData from '@/assets/maplist/sports.json';
 import diningHallsGeoJsonData from '@/assets/maplist/dining_halls.json';
+import cafeGeoJosnData from '@/assets/maplist/cafes.json'
 import { Filter, Marker } from '@/types/mapTypes';
 
 interface GeoJSONFeature {
@@ -30,6 +31,7 @@ const filterToJsonMap: Map<Filter, GeoJSONData> = new Map<Filter, GeoJSONData>([
   ['Bus Stops', busGeoJsonData],
   ['Dining Halls', diningHallsGeoJsonData],
   ['Sports Fields', sportsGeoJsonData],
+  ['Cafes', cafeGeoJosnData]
 ]);
 
 export const getMarkerData = (filter: Filter): Marker[] => {
