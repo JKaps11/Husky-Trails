@@ -1,8 +1,9 @@
 //==============================================[Imports]==============================================
 import { Modal, Portal, List, IconButton } from 'react-native-paper';
-import { Building, ZoomInfo } from '@/types/mapTypes';
+import { Building, Marker, ZoomInfo } from '@/types/mapTypes';
 import { searchModalStyles } from './searchModelStyles';
 import useBuildings from '@/hooks/useBuildings';
+import { useEffect } from 'react';
 
 //==============================================[Props Definition]==============================================
 interface SearchModalProps {
@@ -13,8 +14,10 @@ interface SearchModalProps {
   setQuery: (s: string) => void;
   zoomFunction: (zi: ZoomInfo) => void;
   routeFunction: (b: Building) => void;
+  searchRouteFunction: (m: Marker) => void;
   setCenterMarkerToNotVisible: () => void;
-  onValidUserLocation: (f:(userLocation: [number, number]) => void) => void;
+  onValidUserLocation: (f: (userLocation: [number, number]) => void) => void;
+  getRecommendations: (search: string, count: number) => Building[];
 }
 
 //==============================================[Component]==============================================
@@ -26,12 +29,10 @@ const SearchModal: React.FC<SearchModalProps> = ({
   setQuery,
   zoomFunction,
   routeFunction,
+  searchRouteFunction,
   setCenterMarkerToNotVisible = () => {},
-  onValidUserLocation
-  
+  getRecommendations,
 }: SearchModalProps) => {
-  const { getRecommendations, addUserLocationToReccomendations } = useBuildings();
-
   //==============================================[Handlers]==============================================
   const goToLocation = (b: Building) => {
     setQuery(b.name);
@@ -42,6 +43,13 @@ const SearchModal: React.FC<SearchModalProps> = ({
       animationDuration: 1000,
     };
     zoomFunction(zoomInfo);
+
+    const newMarker: Marker = {
+      id: `marker-${[b.coordinates.longitude, b.coordinates.latitude].join('-')}`,
+      name: b.name,
+      coordinates: [b.coordinates.longitude, b.coordinates.latitude],
+    };
+    searchRouteFunction(newMarker);
   };
 
   const selectRoute = (b: Building) => {
@@ -61,8 +69,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
     ));
   };
 
-  onValidUserLocation(addUserLocationToReccomendations);
-  const buidlingRecommendations: Building[] = getRecommendations(query, 10)
+  const buidlingRecommendations: Building[] = getRecommendations(query, 10);
 
   //==============================================[Render]==============================================
   return (

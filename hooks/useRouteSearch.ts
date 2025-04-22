@@ -27,6 +27,8 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
   const [isFetchingRoute, setIsFetchingRoute] = useState(false);
   const [routeError, setRouteError] = useState<string | null>(null);
 
+  const isRouteReady = startSelected && endSelected;
+
   //==============================================[API Call]==============================================
   const fetchRoutePath = async () => {
     if (!startSelected || !endSelected) return;
@@ -59,7 +61,7 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
 
       const data = await res.json();
 
-        if (!data.coordinates || !Array.isArray(data.coordinates)) {
+      if (!data.coordinates || !Array.isArray(data.coordinates)) {
         console.error('Invalid route data:', data);
         return;
       }
@@ -119,21 +121,23 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
     setActiveRouteField(null);
   };
 
-  //==============================================[Functions for User]============================================== 
-   /**
+  //==============================================[Functions for User]==============================================
+  /**
    * Sets the starting location in route info to the user location or the center of campus
    * @param userLocation Coordinates for where the user is located
    * @returns nothing if userLocation is null or not available
    */
-   const setStartingLocationToUserLocation = (userLocation: [number, number]) => {
+  const setStartingLocationToUserLocation = (
+    userLocation: [number, number],
+  ) => {
     const location: Building = {
       name: 'Your Location',
       coordinates: {
-        longitude: userLocation.at(1) ?? 72.2454,
-        latitude: userLocation.at(0) ?? 41.6135,
+        longitude: userLocation.at(0) ?? 72.2454,
+        latitude: userLocation.at(1) ?? 41.6135,
       },
     };
-  
+
     setRouteInfo((prev) => ({
       ...prev,
       startingLocation: location,
@@ -141,23 +145,23 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
 
     setStartSelected(true);
   };
-  
+
   const setRouteWithInitialStartingLocationUser = (m: Marker) => {
-   const location: Building = {
+    const location: Building = {
       name: m.name,
       coordinates: {
-        longitude: m.coordinates.at(1) ?? 72.2454,
-        latitude: m.coordinates.at(0) ?? 41.6135,
-      }
-    }
+        longitude: m.coordinates.at(0) ?? 72.2454,
+        latitude: m.coordinates.at(1) ?? 41.6135,
+      },
+    };
     setRouteInfo((prev) => ({
       ...prev,
       destination: location,
     }));
-    setEndSelected(true)
-  }
+    setEndSelected(true);
+  };
 
-//==============================================[Input Handling]==============================================
+  //==============================================[Input Handling]==============================================
 
   const clearRoute = () => {
     setRouteInfo({
@@ -239,6 +243,7 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
     endSelected,
     clearRoute,
     setStartingLocationToUserLocation,
-    setRouteWithInitialStartingLocationUser
+    setRouteWithInitialStartingLocationUser,
+    isRouteReady,
   };
 }

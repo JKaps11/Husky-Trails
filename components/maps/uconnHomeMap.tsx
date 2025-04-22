@@ -22,7 +22,6 @@ import {
   getCurrentPositionAsync,
   requestForegroundPermissionsAsync,
 } from 'expo-location';
-import MapModal from './MapModal';
 import { COLORS } from '@/constants/theme';
 
 //==============================================[Component Props]==============================================
@@ -306,10 +305,10 @@ const UConnMap: React.FC<MapProps> = memo(
               <View style={{ alignItems: 'center' }}>
                 <MaterialIcons
                   name="navigation"
-                  size={28}
+                  size={40}
                   color={COLORS.primaryO}
                   style={{
-                    backgroundColor: 'white',
+                    backgroundColor: 'transparent',
                     borderRadius: 14,
                     padding: 2,
                     shadowColor: '#000',

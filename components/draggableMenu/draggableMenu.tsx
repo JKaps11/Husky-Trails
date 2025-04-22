@@ -37,7 +37,7 @@ const DraggableMenu: React.FC<DraggableMenuProps> = ({
   setFilter,
   setQuery,
   zoomFunction,
-  setRoute
+  setRoute,
 }: DraggableMenuProps) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedItem, setSelectedItem] = useState<RecommendationItem | null>(
@@ -91,14 +91,13 @@ const DraggableMenu: React.FC<DraggableMenuProps> = ({
     setSelectedItem(item);
     setQuery(item.marker.name);
     setFilter(undefined);
-   
+    const zoomInfo: ZoomInfo = {
+      coordinates: item.marker.coordinates,
+      zoomLevel: 17,
+      animationDuration: 1000,
+    };
+    zoomFunction(zoomInfo);
     setRoute(item.marker);
-    // const zoomInfo: ZoomInfo = {
-    //   coordinates: item.marker.coordinates,
-    //   zoomLevel: 17,
-    //   animationDuration: 1000,
-    // };
-    // zoomFunction(zoomInfo);
   }, []);
 
   return (
