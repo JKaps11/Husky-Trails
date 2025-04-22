@@ -1,5 +1,5 @@
 //==============================================[Imports]==============================================
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import CustomSearchBar from '@/components/searchFeature/searchBar/customSearchBar';
 import { View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -19,30 +19,60 @@ import OfflineScreen from '@/components/network/offlineScreen';
 import RouteStartPopup from '@/components/routingFeature/routeStartPopup/routeStartPopup';
 import RouteTopBar from '@/components/routingFeature/routeTopBar/routeTopBar';
 import MapModal from '@/components/maps/MapModal';
+import useBuildings from '@/hooks/useBuildings';
+import TrackingPopup from '@/components/trackingFeature/trackingPopup';
+import SearchPopup from '@/components/searchFeature/searchPopup/searchPopup';
 
 //==============================================[Component]==============================================
 const Index: React.FC = () => {
   //==============================[Network]=================================
   const isConnected: boolean | undefined = useLiveNetworkState();
 
-    //==============================[User Location + Navigating]=================================
+  //==============================[User Location + Navigating]=================================
   const [userLocation, setUserLocation] = useState<[number, number] | null>(
     null,
   );
 
+  const [trackingMode, setTrackingMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!trackingMode || userLocation === null) {
+      return;
+    }
+
+    const newZoomInfo: ZoomInfo = {
+      coordinates: userLocation,
+      zoomLevel: 17,
+      animationDuration: 200,
+    };
+
+    setZoomInfo(newZoomInfo);
+  }, [userLocation, trackingMode]);
+
+  const exitTrackingMode = () => {
+    setRouteMode(false);
+    setTrackingMode(false);
+    setSearchQuery('');
+  };
+
   /**
- * Checks whether user location is available.
- * @returns true if user is on campus and has selected "Your Location" start or destination.
- */
+   * Checks whether user location is available.
+   * @returns true if user is on campus and has selected "Your Location" start or destination.
+   */
   const isUsingUserLocation: () => boolean = () => {
-    return (userLocation != null) && (routeInfo.startingLocation.name === "Your Location" || routeInfo.destination.name === "Your Location")
-  }
+    return (
+      userLocation != null &&
+      (routeInfo.startingLocation.name === 'Your Location' ||
+        routeInfo.destination.name === 'Your Location')
+    );
+  };
 
   const onValidUserLocation = (f: (userLocation: [number, number]) => void) => {
-    userLocation && f(userLocation)
-  }
+    userLocation && f(userLocation);
+  };
 
-  const setUseUserLocation = () => onValidUserLocation(setStartingLocationToUserLocation);
+  const setUseUserLocation = () =>
+    onValidUserLocation(setStartingLocationToUserLocation);
 
   const onRouteStart = () => {
     if (userLocation === null) {
@@ -52,7 +82,21 @@ const Index: React.FC = () => {
       setRouteMode(false);
       return;
     }
+
+    setTrackingMode(true);
   };
+
+  const { addUserLocationToReccomendations, getRecommendations } =
+    useBuildings();
+  const hasAddedUserLocation = useRef(false);
+
+  useEffect(() => {
+    if (userLocation && !hasAddedUserLocation.current) {
+      addUserLocationToReccomendations(userLocation);
+      hasAddedUserLocation.current = true;
+    }
+  }, [userLocation]);
+
   //==============================[Modals + Zoom]=================================
   const [visibleModal, setModalVisible] = useState<boolean>(false);
   const showModal = () => setModalVisible(true);
@@ -107,11 +151,10 @@ const Index: React.FC = () => {
     updateRouteFieldText,
     setTransportationMethod,
     routeLineCoords,
-    startSelected,
-    endSelected,
     clearRoute,
     setStartingLocationToUserLocation,
-    setRouteWithInitialStartingLocationUser
+    setRouteWithInitialStartingLocationUser,
+    isRouteReady,
   } = useRouteSearch(() => setZoomInfo);
 
   const routingSearchModalProps = {
@@ -122,21 +165,45 @@ const Index: React.FC = () => {
     setQuery: setRouteSearchQuery,
     zoomFunction: () => {},
     routeFunction: selectRouteBuilding,
+    searchRouteFunction: () => {},
     setCenterMarkerToNotVisible: () => {},
     onValidUserLocation: onValidUserLocation,
-  };         
-
-  const showRoutePopup = startSelected && endSelected;
+    getRecommendations: getRecommendations,
+  };
 
   const setRouteWithInitial = (m: Marker) => {
     setUseUserLocation();
-    setRouteWithInitialStartingLocationUser(m)
-    if (showRoutePopup) setRouteMode(true);
-  }
+    setRouteWithInitialStartingLocationUser(m);
+    setRouteMode(true);
+  };
 
-  useEffect(clearRoute, [routeMode]);
+  useEffect(() => {
+    if (!routeMode) {
+      clearRoute();
+    }
+  }, [routeMode]);
 
   //==============================[Regular Search Feature Functions]=================================
+  const [searchMode, setSearchMode] = useState<boolean>(false);
+
+  const [searchMarker, setSearchMarker] = useState<Marker>({
+    coordinates: [0, 0],
+    id: '',
+    name: '',
+  });
+
+  const enterSearchMode = (m: Marker) => {
+    setSearchMarker(m);
+    setSearchMode(true);
+  };
+  const exitSearchMode = () => setSearchMode(false);
+
+  const startRouteFromSearch = () => {
+    exitSearchMode();
+    setCenterMarkerVisible(false);
+    setRouteWithInitial(searchMarker);
+  };
+
   const [searchQuery, setSearchQuery] = useState<string>('');
   const onSearchBarType: (query: string) => string = (query: string) => {
     showModal();
@@ -155,8 +222,10 @@ const Index: React.FC = () => {
     setQuery: setSearchBarQuery,
     zoomFunction: (zi: ZoomInfo) => zoomToLocation(zi, true),
     routeFunction: () => {},
+    searchRouteFunction: enterSearchMode,
     setCenterMarkerToNotVisible: () => setCenterMarkerVisible(false),
     onValidUserLocation: onValidUserLocation,
+    getRecommendations: getRecommendations,
   };
 
   //==============================[On Component Mount]=================================
@@ -201,10 +270,12 @@ const Index: React.FC = () => {
           )}
           <SearchModal {...searchModalProps} />
 
-          <RouteButton setToRouteMode={setToRouteMode} />
-          {routeMode && (
+          {!trackingMode && !searchMode && (
+            <RouteButton setToRouteMode={setToRouteMode} />
+          )}
+          {routeMode && !trackingMode && (
             <RouteTopBar
-              routeTopBarMode={!showRoutePopup}
+              routeTopBarMode={!isRouteReady}
               routeInfo={routeInfo}
               clearRoute={clearRoute}
               onType={updateRouteFieldText}
@@ -212,7 +283,7 @@ const Index: React.FC = () => {
               onTransportationChange={setTransportationMethod}
             />
           )}
-          {showRoutePopup && routeMode && (
+          {isRouteReady && routeMode && !trackingMode && (
             <RouteStartPopup
               startName={routeInfo.startingLocation.name}
               endName={routeInfo.destination.name}
@@ -221,11 +292,10 @@ const Index: React.FC = () => {
               onStart={onRouteStart}
               onClear={clearRoute}
               isUsingUserLocation={isUsingUserLocation}
-              setInitalStartToUserLocation = {setUseUserLocation}
             />
           )}
 
-          {!routeMode && (
+          {!routeMode && !searchMode && (
             <FilterButtons
               setFilterState={setFilter}
               zoomToLocation={zoomToLocation}
@@ -241,6 +311,16 @@ const Index: React.FC = () => {
               setQuery={setSearchBarQuery}
             />
           )}
+
+          {trackingMode && (
+            <TrackingPopup
+              startName={routeInfo.startingLocation.name}
+              endName={routeInfo.destination.name}
+              exitTracking={exitTrackingMode}
+            />
+          )}
+
+          {searchMode && <SearchPopup startRoute={startRouteFromSearch} />}
 
           {/* Location Error/ Network Error Modal */}
           <MapModal
