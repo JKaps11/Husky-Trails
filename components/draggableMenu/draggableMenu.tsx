@@ -30,12 +30,14 @@ interface DraggableMenuProps {
   setFilter: (filter: Filter) => void;
   setQuery: (s: string) => void;
   zoomFunction: (zi: ZoomInfo) => void;
+  setRoute: (m: Marker) => void;
 }
 const DraggableMenu: React.FC<DraggableMenuProps> = ({
   filter,
   setFilter,
   setQuery,
   zoomFunction,
+  setRoute,
 }: DraggableMenuProps) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedItem, setSelectedItem] = useState<RecommendationItem | null>(
@@ -95,6 +97,7 @@ const DraggableMenu: React.FC<DraggableMenuProps> = ({
       animationDuration: 1000,
     };
     zoomFunction(zoomInfo);
+    setRoute(item.marker);
   }, []);
 
   return (
@@ -118,7 +121,6 @@ const DraggableMenu: React.FC<DraggableMenuProps> = ({
             id: marker.id,
             marker,
           }))}
-          //extraData={selectedItem}
           keyExtractor={(item: RecommendationItem) => item.id.toString()}
           renderItem={({ item }: { item: RecommendationItem }) => (
             <SelectableListItem

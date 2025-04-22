@@ -14,6 +14,7 @@ interface RouteStartPopupProps {
   onChangeMethod: (method: Transportation) => void;
   onStart: () => void;
   onClear: () => void;
+  isUsingUserLocation: () => boolean;
 }
 
 //==============================================[Component]==============================================
@@ -24,6 +25,7 @@ const RouteStartPopup: React.FC<RouteStartPopupProps> = ({
   onChangeMethod,
   onStart,
   onClear,
+  isUsingUserLocation,
 }) => {
   return (
     <View style={routePopupStyles.container}>
@@ -39,13 +41,15 @@ const RouteStartPopup: React.FC<RouteStartPopupProps> = ({
           onTransportationChange={onChangeMethod}
           sizeLarge={false}
         />
-        <IconButton
-          icon="check"
-          iconColor={routePopupStyles.button.color}
-          containerColor={routePopupStyles.button.backgroundColor}
-          size={25}
-          onPress={onStart}
-        />
+        {isUsingUserLocation() && (
+          <IconButton
+            icon="check"
+            iconColor={routePopupStyles.button.color}
+            containerColor={routePopupStyles.button.backgroundColor}
+            size={25}
+            onPress={onStart}
+          />
+        )}
       </View>
     </View>
   );

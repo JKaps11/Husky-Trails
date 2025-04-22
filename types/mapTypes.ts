@@ -26,8 +26,7 @@ export type Transportation = 'Walking' | 'Driving' | 'Biking';
 
 export type Filter =
   | 'Dining Halls'
-  | 'Bathrooms'
-  | 'Study Rooms'
+  | 'Cafes'
   | 'Sports Fields'
   | 'Bus Stops'
   | undefined;
