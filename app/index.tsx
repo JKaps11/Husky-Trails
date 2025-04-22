@@ -9,7 +9,7 @@ import { CustomTheme } from '@/constants/theme';
 import { defaultStyles } from './defaultStyles';
 import UConnMap from '@/components/maps/uconnHomeMap';
 import SearchModal from '@/components/searchFeature/searchModal/searchModal';
-import { Filter, ZoomInfo } from '@/types/mapTypes';
+import { Filter, Marker, ZoomInfo } from '@/types/mapTypes';
 import DraggableMenu from '@/components/draggableMenu/draggableMenu';
 import FilterButtons from '@/components/filterFeature/filterButtons/filterButtons';
 import { useLiveNetworkState } from '@/hooks/useLiveNetworkState';
@@ -110,7 +110,8 @@ const Index: React.FC = () => {
     startSelected,
     endSelected,
     clearRoute,
-    setStartingLocationToUserLocation
+    setStartingLocationToUserLocation,
+    setRouteWithInitialStartingLocationUser
   } = useRouteSearch(() => setZoomInfo);
 
   const routingSearchModalProps = {
@@ -123,9 +124,15 @@ const Index: React.FC = () => {
     routeFunction: selectRouteBuilding,
     setCenterMarkerToNotVisible: () => {},
     onValidUserLocation: onValidUserLocation,
-  };
+  };         
 
   const showRoutePopup = startSelected && endSelected;
+
+  const setRouteWithInitial = (m: Marker) => {
+    setUseUserLocation();
+    setRouteWithInitialStartingLocationUser(m)
+    if (showRoutePopup) setRouteMode(true);
+  }
 
   useEffect(clearRoute, [routeMode]);
 
@@ -229,6 +236,7 @@ const Index: React.FC = () => {
             <DraggableMenu
               filter={selectedFilter}
               setFilter={setFilter}
+              setRoute={setRouteWithInitial}
               zoomFunction={(zi: ZoomInfo) => zoomToLocation(zi, true)}
               setQuery={setSearchBarQuery}
             />

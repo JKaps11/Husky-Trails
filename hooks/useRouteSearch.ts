@@ -1,6 +1,6 @@
 //==============================================[Imports]==============================================
 import { useEffect, useState } from 'react';
-import { Building, RouteInfo, ZoomInfo } from '@/types/mapTypes';
+import { Building, Marker, RouteInfo, ZoomInfo } from '@/types/mapTypes';
 
 //==============================================[Hook Definition]==============================================
 export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
@@ -138,8 +138,25 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
       ...prev,
       startingLocation: location,
     }));
+
+    setStartSelected(true);
   };
   
+  const setRouteWithInitialStartingLocationUser = (m: Marker) => {
+   const location: Building = {
+      name: m.name,
+      coordinates: {
+        longitude: m.coordinates.at(1) ?? 72.2454,
+        latitude: m.coordinates.at(0) ?? 41.6135,
+      }
+    }
+    setRouteInfo((prev) => ({
+      ...prev,
+      destination: location,
+    }));
+    setEndSelected(true)
+  }
+
 //==============================================[Input Handling]==============================================
 
   const clearRoute = () => {
@@ -221,6 +238,7 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
     startSelected,
     endSelected,
     clearRoute,
-    setStartingLocationToUserLocation
+    setStartingLocationToUserLocation,
+    setRouteWithInitialStartingLocationUser
   };
 }
