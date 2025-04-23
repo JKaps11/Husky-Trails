@@ -45,6 +45,7 @@ const UConnMap: React.FC<MapProps> = memo(
     setUserLocation,
     showModalWithMessage,
   }: MapProps) => {
+
     //==============================================[Map Initialization State]==============================================
     const MAP_API_ENDPOINT = [
       'https://cse-4939w-mapping-routes-qlq8.onrender.com/tiles/{z}/{x}/{y}.pbf',
@@ -58,8 +59,8 @@ const UConnMap: React.FC<MapProps> = memo(
     };
 
     const campusBounds = {
-      ne: [-72.2405, 41.802],
-      sw: [-72.265, 41.77],
+      ne: [ -72.2472, 41.8112 ],
+      sw: [ -72.2695, 41.8035 ]
     };
 
     //==============================================[Location Permissions + Handling]==============================================
@@ -306,7 +307,7 @@ const UConnMap: React.FC<MapProps> = memo(
                 <MaterialIcons
                   name="navigation"
                   size={40}
-                  color={COLORS.primaryO}
+                  color={COLORS.tertiary}
                   style={{
                     backgroundColor: 'transparent',
                     borderRadius: 14,

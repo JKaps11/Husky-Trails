@@ -2,8 +2,7 @@
 import { Modal, Portal, List, IconButton } from 'react-native-paper';
 import { Building, Marker, ZoomInfo } from '@/types/mapTypes';
 import { searchModalStyles } from './searchModelStyles';
-import useBuildings from '@/hooks/useBuildings';
-import { useEffect } from 'react';
+import { Keyboard } from 'react-native';
 
 //==============================================[Props Definition]==============================================
 interface SearchModalProps {
@@ -35,6 +34,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
 }: SearchModalProps) => {
   //==============================================[Handlers]==============================================
   const goToLocation = (b: Building) => {
+    Keyboard.dismiss()
     setQuery(b.name);
     hideModal();
     const zoomInfo: ZoomInfo = {
@@ -53,6 +53,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
   };
 
   const selectRoute = (b: Building) => {
+    Keyboard.dismiss()
     routeFunction(b);
     hideModal();
   };

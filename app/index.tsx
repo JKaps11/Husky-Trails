@@ -3,9 +3,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import CustomSearchBar from '@/components/searchFeature/searchBar/customSearchBar';
 import { View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { Provider as PaperProvider } from 'react-native-paper';
+import { ActivityIndicator, Provider as PaperProvider } from 'react-native-paper';
 import { StatusBar } from 'expo-status-bar';
-import { CustomTheme } from '@/constants/theme';
+import { COLORS, CustomTheme } from '@/constants/theme';
 import { defaultStyles } from './defaultStyles';
 import UConnMap from '@/components/maps/uconnHomeMap';
 import SearchModal from '@/components/searchFeature/searchModal/searchModal';
@@ -43,7 +43,7 @@ const Index: React.FC = () => {
     const newZoomInfo: ZoomInfo = {
       coordinates: userLocation,
       zoomLevel: 17,
-      animationDuration: 200,
+      animationDuration: 1000,
     };
 
     setZoomInfo(newZoomInfo);
@@ -150,11 +150,12 @@ const Index: React.FC = () => {
     selectRouteBuilding,
     updateRouteFieldText,
     setTransportationMethod,
-    routeLineCoords,
+    getRouteLine,
     clearRoute,
     setStartingLocationToUserLocation,
     setRouteWithInitialStartingLocationUser,
     isRouteReady,
+    isFetchingRoute
   } = useRouteSearch(() => setZoomInfo);
 
   const routingSearchModalProps = {
@@ -171,6 +172,8 @@ const Index: React.FC = () => {
     getRecommendations: getRecommendations,
   };
 
+  
+
   const setRouteWithInitial = (m: Marker) => {
     setUseUserLocation();
     setRouteWithInitialStartingLocationUser(m);
@@ -179,6 +182,7 @@ const Index: React.FC = () => {
 
   useEffect(() => {
     if (!routeMode) {
+      setSearchQuery('')
       clearRoute();
     }
   }, [routeMode]);
@@ -329,10 +333,12 @@ const Index: React.FC = () => {
             onClose={() => setShowMapModal(false)}
           />
 
+          {isFetchingRoute && <ActivityIndicator animating={true} size={'large'} hidesWhenStopped color={COLORS.tertiary} style={defaultStyles.ActivityIndicator}/>}
+
           <UConnMap
             zoomInfo={zoomInfo}
             filter={selectedFilter}
-            routeLine={routeLineCoords}
+            routeLine={getRouteLine}
             centerMarkerVisible={centerMarkerVisible}
             userLocation={userLocation}
             setUserLocation={setUserLocation}

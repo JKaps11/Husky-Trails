@@ -1,6 +1,6 @@
 //==============================================[Imports]==============================================
-import { useEffect, useState } from 'react';
-import { Building, Marker, RouteInfo, ZoomInfo } from '@/types/mapTypes';
+import { useEffect, useMemo, useState } from 'react';
+import { Building, Marker, RouteInfo, Transportation, ZoomInfo } from '@/types/mapTypes';
 
 //==============================================[Hook Definition]==============================================
 export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
@@ -14,9 +14,12 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
     destination: { name: '', coordinates: { latitude: 0, longitude: 0 } },
   });
 
-  const [routeLineCoords, setRouteLineCoords] = useState<[number, number][]>(
-    [],
-  );
+  const [routeLines, setRouteLines] = useState<Record<Transportation, [number, number][]>>({
+    Walking: [],
+    Driving: [],
+    Biking: []
+  });
+  
   const [routeSearchQuery, setRouteSearchQuery] = useState<string>('');
   const [activeRouteField, setActiveRouteField] = useState<
     'start' | 'end' | null
@@ -35,39 +38,61 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
 
     const startCoords = routeInfo.startingLocation.coordinates;
     const endCoords = routeInfo.destination.coordinates;
-    const profile = routeInfo.transportationMethod;
-
-    const profileMap: Record<string, string> = {
-      Walking: 'foot',
-      Driving: 'car',
-      Biking: 'bike',
-    };
-
-    const translatedProfile = profileMap[profile];
 
     setIsFetchingRoute(true);
     setRouteError(null);
 
     try {
-      const res = await fetch(ROUTE_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          start: [startCoords.longitude, startCoords.latitude],
-          end: [endCoords.longitude, endCoords.latitude],
-          profile: translatedProfile,
+      const bodyBase = {
+        start: [startCoords.longitude, startCoords.latitude],
+        end: [endCoords.longitude, endCoords.latitude],
+      };
+  
+      const [walkRes, driveRes, bikeRes] = await Promise.all([
+        fetch(ROUTE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...bodyBase, profile: 'foot' }),
         }),
-      });
+        fetch(ROUTE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...bodyBase, profile: 'car' }),
+        }),
+        fetch(ROUTE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...bodyBase, profile: 'bike' }),
+        }),
+      ]);
+  
+      const [walkData, driveData, bikeData] = await Promise.all([
+        walkRes.json(),
+        driveRes.json(),
+        bikeRes.json(),
+      ]);
 
-      const data = await res.json();
-
-      if (!data.coordinates || !Array.isArray(data.coordinates)) {
-        console.error('Invalid route data:', data);
-        return;
+      if (!walkData.coordinates || !driveData.coordinates || !bikeData.coordinates) {
+        throw new Error('Invalid route data');
       }
 
-      setRouteLineCoords(data.coordinates);
-      zoomToRoute(data.coordinates);
+      if (
+        !Array.isArray(walkData.coordinates) ||
+        !Array.isArray(driveData.coordinates) ||
+        !Array.isArray(bikeData.coordinates)
+      ) {
+        console.error('Invalid route data: one or more coordinate arrays are invalid');
+        return;
+      }
+      
+      
+      setRouteLines({
+        Walking: walkData.coordinates,
+        Driving: driveData.coordinates,
+        Biking: bikeData.coordinates
+      })
+
+      zoomToRoute(walkData.coordinates);
     } catch (err) {
       setRouteError('Could not fetch route. Try again.');
     } finally {
@@ -97,7 +122,7 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
     ];
 
     // crude zoom level estimate — can be refined if needed
-    const zoomLevel = 15; // good default for campus-scale
+    const zoomLevel = 14; // good default for campus-scale
 
     setZoomInfo({
       coordinates: center,
@@ -162,6 +187,14 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
   };
 
   //==============================================[Input Handling]==============================================
+  const getRouteLine = useMemo(() => {
+    const method = routeInfo.transportationMethod;
+    if (method === "Walking") return routeLines.Walking;
+    if (method === "Driving") return routeLines.Driving;
+    if (method === "Biking") return routeLines.Biking;
+    return [];
+  }, [routeInfo.transportationMethod, routeLines]);
+  
 
   const clearRoute = () => {
     setRouteInfo({
@@ -172,7 +205,11 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
       },
       destination: { name: '', coordinates: { latitude: 0, longitude: 0 } },
     });
-    setRouteLineCoords([]);
+    setRouteLines({
+      Walking: [],
+      Driving: [],
+      Biking: []
+    })
     setStartSelected(false);
     setEndSelected(false);
     setRouteSearchQuery('');
@@ -238,12 +275,13 @@ export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
     activeRouteField,
     updateRouteFieldText,
     setTransportationMethod,
-    routeLineCoords,
+    getRouteLine,
     startSelected,
     endSelected,
     clearRoute,
     setStartingLocationToUserLocation,
     setRouteWithInitialStartingLocationUser,
     isRouteReady,
+    isFetchingRoute,
   };
 }
