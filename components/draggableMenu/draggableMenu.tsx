@@ -91,12 +91,12 @@ const DraggableMenu: React.FC<DraggableMenuProps> = ({
     setSelectedItem(item);
     setQuery(item.marker.name);
     setFilter(undefined);
-    const zoomInfo: ZoomInfo = {
-      coordinates: item.marker.coordinates,
-      zoomLevel: 17,
-      animationDuration: 1000,
-    };
-    zoomFunction(zoomInfo);
+    // const zoomInfo: ZoomInfo = {
+    //   coordinates: item.marker.coordinates,
+    //   zoomLevel: 17,
+    //   animationDuration: 1000,
+    // };
+    // zoomFunction(zoomInfo);
     setRoute(item.marker);
   }, []);
 

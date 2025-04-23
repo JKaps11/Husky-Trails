@@ -43,6 +43,15 @@ export const defaultStyles = StyleSheet.create({
     top: 0,
     zIndex: 1,
   },
+  ActivityIndicator: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    margin: 'auto',
+    zIndex: 2000
+  }
 });
 
 export default defaultStyles;
