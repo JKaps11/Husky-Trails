@@ -21,4 +21,5 @@ Husky Trails is a cross-platform navigation app built with React Native and Expo
 - **Frontend:** React Native, Expo  
 - **Maps & Location:** OSM data, Map Libre Gl Native,
 - **Styling:** CSS
+- **Design:** Figma
 - **Backend:** Fast Api, GraphHopper, Tile server
