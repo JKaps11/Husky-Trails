@@ -5,7 +5,7 @@ import { Building, Marker, RouteInfo, Transportation, ZoomInfo } from '@/types/m
 //==============================================[Hook Definition]==============================================
 export function useRouteSearch(setZoomInfo: (zi: ZoomInfo) => void) {
   const ROUTE_ENDPOINT =
-    'https://cse-4939w-mapping-routes.onrender.com/api/render-route';
+    'routeEndpointGoesHere';
 
   //==============================================[State]==============================================
   const [routeInfo, setRouteInfo] = useState<RouteInfo>({
