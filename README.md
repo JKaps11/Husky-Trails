@@ -8,11 +8,7 @@
 - [About](#about)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Demo](#demo)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
+  
 ## About
 Husky Trails is a cross-platform navigation app built with React Native and Expo, designed to help new students navigate through campus by giving them tools like a route builder and filtered search. In the future, the plan was to allow for students to migrate their UConn schedule into the app, and then the app would check the day and output the students schedule in routes for the day.
 
