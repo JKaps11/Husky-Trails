@@ -1,6 +1,5 @@
 # Husky Trails
 
-[![Expo](https://img.shields.io/badge/Expo-48CFAD?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/@JKaps11/husky-trails)
 [![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/if67bR9YJI8)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
